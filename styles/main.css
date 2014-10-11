@@ -21,7 +21,17 @@ header, section {
 }
 
 a {
+    color: #ADADAD;
     text-decoration: none;
+}
+
+a:hover {
+    color: #ea3b3b;
+    -webkit-transition: color 200ms linear;
+    -moz-transition: color 200ms linear;
+    -ms-transition: color 200ms linear;
+    -o-transition: color 200ms linear;
+    transition: color 200ms linear;
 }
 
 button {
@@ -106,6 +116,10 @@ header .container {
     padding-left: 20px;
     padding-right: 20px;
     display: inline;
+}
+
+.nav-header li a {
+    text-transform: uppercase;
 }
 
 .header-left {
