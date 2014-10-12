@@ -57,6 +57,11 @@ button {
 .btn-seethrough a:hover {
     background: #ea3b3b;
     border: 2px solid #ea3b3b;
+    -webkit-transition: background 100ms linear;
+    -moz-transition: background 100ms linear;
+    -ms-transition: background 100ms linear;
+    -o-transition: background 100ms linear;
+    transition: background 100ms linear;
 }
 
 .section-title {
@@ -99,14 +104,21 @@ button {
 /* ============== Nav area =============== */
 
 .header {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    width: 100%;
     z-index: 5;
     height: 67px;
 }
 
 header .container {
     color: #A1A1A1;
+    text-align: center;
+}
+
+.logo img {
+    width: 72px;
 }
 
 .nav-header {
@@ -126,21 +138,31 @@ header .container {
 }
 
 .nav-header li a {
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
 }
 
 .header-left {
-    float: left;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.header-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15px;
 }
 
 .header-right {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 15px;
 }
 
 .column {
     display: table-cell;
-    padding: 15px 0;
 }
 
 .register {
@@ -161,9 +183,9 @@ header .container {
 .intro {
     padding: 40px 0;
     width: 100%;
-    margin-top: -75px;
+    margin-top: 0;
     z-index: 1;
-    background: linear-gradient(rgba(23, 27, 35, 0.8), rgba(37, 27, 35, 0.8)), url('../images/intro.jpg');
+    background: linear-gradient(rgba(87, 74, 55, 0.8), rgba(107, 97, 85, 0.4)), url('../images/intro.jpg');
     background-repeat: no-repeat;
     background-position: 50% 40%;
     background-size: cover;
@@ -171,7 +193,7 @@ header .container {
 
 .intro p {
     margin-top: 50px;
-    color: #A1A1A1;
+    color: #F2F2F2;
 }
 
 .intro-logo {
@@ -272,4 +294,10 @@ footer {
 }
 .clearfix:after {
   clear: both;
+}
+
+/* ============== Hidden =============== */
+
+.hidden {
+    display: none;
 }
