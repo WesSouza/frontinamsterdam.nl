@@ -11,6 +11,10 @@ ul, ol {
     margin: 0;
 }
 
+li {
+    list-style: none;
+}
+
 body {
     background-color: #FFF;
     font-family: 'Open Sans', sans-serif;
@@ -87,6 +91,7 @@ button {
 .content {
     padding: 50px 0;
     position: relative;
+    text-align: center;
 }
 
 .content p span{
@@ -220,7 +225,7 @@ header .container {
 
 /* ============== Speakers area =============== */
 
-.schedule, .organizers, .sponsors {
+.organizers, .sponsors {
     height: 400px; /* This is temporary */
 }
 
@@ -270,6 +275,61 @@ header .container {
 .content-location {
     padding: 50px 0 0;
 }
+
+/* ============== Schedule area =============== */
+
+
+.schedule-wrapper {
+    height: 100%;
+}
+
+.day-wrapper {
+    margin: 15px 0;
+}
+
+.schedule-table {
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+.schedule-left {
+    position: absolute;
+    left: 315px;
+    text-align: right;
+}
+
+.schedule-center {
+    position: absolute;
+    left: 46%;
+}
+
+.schedule-right {
+    position: absolute;
+    right: 430px;
+    text-align: left;
+}
+
+.schedule-date {
+    background: #FFE800;
+    margin: 15px 0;
+    display: inline-block;
+}
+
+.schedule-item, .schedule-item-speaker {
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+.schedule-item-speaker {
+    background: #F2F2F2;
+}
+
+.schedule-time {
+    background: #E0A1A1;
+}
+
 
 h1 {
     font-weight: 300;
