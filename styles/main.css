@@ -76,6 +76,7 @@ button:focus {
 
 .btn-solid a {
     /*border: 2px solid white;*/
+    margin: 35px 0 10px;
     background: #ea3b3b;
     border-radius: 3px;
     display: block;
@@ -497,6 +498,10 @@ footer {
 /*@media only screen and (max-width: 480px){}*/
 
 @media only screen and (max-width: 768px){
+
+    .btn-seethrough a, .btn-solid a {
+        font-size: 16px;
+    }
 
     .intro-logo img {
         width: 75%;
