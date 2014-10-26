@@ -48,7 +48,33 @@ button {
     border: none;
 }
 
+button:focus {
+    outline: none;
+    box-shadow: none;
+    border:2px solid transparent;
+}
+
 .btn-seethrough a {
+    /*border: 2px solid white;*/
+    border: 2px solid #ea3b3b;
+    border-radius: 3px;
+    display: block;
+    font-size: 18px;
+    color: #ea3b3b;
+    padding: 12px 40px;
+}
+
+.btn-seethrough a:hover {
+    background: #ea3b3b;
+    color: white;
+    -webkit-transition: background 100ms linear;
+    -moz-transition: background 100ms linear;
+    -ms-transition: background 100ms linear;
+    -o-transition: background 100ms linear;
+    transition: background 100ms linear;
+}
+
+.btn-solid a {
     /*border: 2px solid white;*/
     background: #ea3b3b;
     border-radius: 3px;
@@ -58,13 +84,7 @@ button {
     padding: 12px 40px;
 }
 
-.btn-seethrough:focus {
-    outline: none;
-    box-shadow: none;
-    border:2px solid transparent;
-}
-
-.btn-seethrough a:hover {
+.btn-solid a:hover {
     background: #C31616;
     -webkit-transition: background 100ms linear;
     -moz-transition: background 100ms linear;
@@ -286,7 +306,7 @@ header .container {
     color: #FFF;
 }
 
-.organizers, .sponsors {
+.organizers {
     height: 400px; /* This is temporary */
 }
 
