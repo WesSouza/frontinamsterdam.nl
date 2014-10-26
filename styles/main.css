@@ -53,7 +53,7 @@ button {
     background: #ea3b3b;
     border-radius: 3px;
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     padding: 12px 40px;
 }
@@ -65,8 +65,7 @@ button {
 }
 
 .btn-seethrough a:hover {
-    background: #ea3b3b;
-    border: 2px solid #ea3b3b;
+    background: #C31616;
     -webkit-transition: background 100ms linear;
     -moz-transition: background 100ms linear;
     -ms-transition: background 100ms linear;
@@ -204,15 +203,19 @@ header .container {
 }
 
 .intro p {
-    margin-top: 50px;
+    margin-top: 35px;
     color: #F2F2F2;
 }
 
 .intro-logo {
     padding-top: 80px;
-    width: 420px;
+    max-width: 420px;
     text-align: center;
     margin: 0 auto;
+}
+
+.intro-logo p{
+    font-size: 20px;
 }
 
 .intro-logo img {
@@ -224,7 +227,64 @@ header .container {
 }
 
 
+.section-intro {
+    width: 80%;
+    color: #888;
+    margin: 0 auto 50px;
+}
+
 /* ============== Speakers area =============== */
+
+/*.organizers, .sponsors {
+    height: 400px;
+}
+
+.speakers-wrapper {
+    width: 30%;
+    text-align: center;
+    float: left;
+    margin: 1.6% 1.6% 6%;
+}
+
+.speakers-thumbnail img {
+    width: 50%;
+}
+
+.speakers-title {
+    font-size: 20px;
+    margin: 15px 0 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.speakers-bio {
+    color: #909090;
+    margin: 10px 0;
+}
+
+.speakers-bio a {
+    color: #ea3b3b;
+}
+
+.speakers-bio a:hover {
+    color: black;
+    -webkit-transition: color 300ms linear;
+    -moz-transition: color 300ms linear;
+    -ms-transition: color 300ms linear;
+    -o-transition: color 300ms linear;
+    transition: color 300ms linear;
+}*/
+
+/* ============== Speakers-teaser area =============== */
+
+.call-for-paper {
+    background: #ea3b3b;
+    border-radius: 3px;
+    padding: 10px 45px;
+    border: none;
+    font-size: 15px;
+    color: #FFF;
+}
 
 .organizers, .sponsors {
     height: 400px; /* This is temporary */
@@ -407,4 +467,35 @@ footer {
 
 .visible {
     opacity: 1;
+}
+
+/** =========================================================================
+    Media queries
+    ========================================================================= */
+
+
+/*@media only screen and (max-width: 480px){}*/
+
+@media only screen and (max-width: 768px){
+
+    .intro-logo img {
+        width: 75%;
+    }
+
+    .section-intro {
+        width: 85%;
+    }
+
+    .container {
+        padding: 40px 0;
+        width: 95%;
+    }
+
+    .content p::after {
+        top: 56px;
+    }
+
+    .section-title {
+        font-size: 25px; 
+    }
 }
