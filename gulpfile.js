@@ -6,6 +6,7 @@ var imagemin = require('gulp-imagemin');
 var sass = require('gulp-sass');
 var connect = require('gulp-connect');
 var htmlmin = require('gulp-htmlmin');
+var deploy = require('gulp-gh-pages');
 var del = require('del');
 
 var src = {
@@ -65,4 +66,11 @@ gulp.task('connect', function() {
   });
 });
 
+gulp.task('deploy', ['build'], function () {
+  return gulp.src('./build/**/*')
+    .pipe(deploy());
+});
+
 gulp.task('default', ['connect', 'watch', 'scripts', 'images', 'styles']);
+
+gulp.task('build', ['scripts', 'images', 'styles']);
