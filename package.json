@@ -1,11 +1,11 @@
 {
   "name": "frontinamsterdam.nl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Front in Amsterdam website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "gulp",
+    "start": "gulp",
     "deploy": "gulp deploy"
   },
   "repository": {
@@ -19,15 +19,11 @@
   },
   "homepage": "https://github.com/frontinamsterdam/www",
   "devDependencies": {
-    "del": "^0.1.3",
     "gulp": "^3.8.9",
+    "gulp-combine-media-queries": "^0.2.0",
     "gulp-concat": "^2.4.1",
     "gulp-connect": "^2.2.0",
     "gulp-gh-pages": "^0.4.0",
-    "gulp-htmlmin": "^0.2.0",
-    "gulp-imagemin": "^1.2.1",
-    "gulp-sass": "^1.2.2",
-    "gulp-sourcemaps": "^1.2.7",
-    "gulp-uglify": "^1.0.1"
+    "gulp-sass": "^1.2.2"
   }
 }

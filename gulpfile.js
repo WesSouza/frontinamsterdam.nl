@@ -1,62 +1,49 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
+var combinemq = require('gulp-combine-media-queries');
 var concat = require('gulp-concat');
-var sourcemaps = require('gulp-sourcemaps');
-var imagemin = require('gulp-imagemin');
-var sass = require('gulp-sass');
 var connect = require('gulp-connect');
-var htmlmin = require('gulp-htmlmin');
 var deploy = require('gulp-gh-pages');
-var del = require('del');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
 
 var src = {
-  scripts: 'src/scripts/*.js',
+  html: 'src/index.html',
   images: 'src/images/**',
-  styles: 'src/styles/*.scss',
-  html: 'src/index.html'
+  scripts: 'src/scripts/*.js',
+  styles: 'src/styles/*.scss'
 };
 
-// gulp.task('clean', function(cb) {
-//   del('build', cb);
-// });
-
-gulp.task('scripts', function() {
-  return gulp.src(src.scripts)
-    .pipe(sourcemaps.init())
-      .pipe(uglify())
-      // .pipe(concat('all.min.js'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('build/scripts'));
+gulp.task('html', function() {
+  return gulp.src(src.html)
+    .pipe(gulp.dest('build/'))
+    .pipe(connect.reload());
 });
 
 gulp.task('images', function() {
   return gulp.src(src.images)
-    .pipe(imagemin({ optimizationLevel: 5 }))
     .pipe(gulp.dest('build/images'))
     .pipe(connect.reload());
+});
+
+gulp.task('scripts', function() {
+  return gulp.src(src.scripts)
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('build/scripts'));
 });
 
 gulp.task('styles', function() {
   return gulp.src(src.styles)
     .pipe(sass())
-    .pipe(concat('all.min.css'))
+    .pipe(combinemq())
+    .pipe(concat('main.css'))
     .pipe(gulp.dest('build/styles'))
     .pipe(connect.reload());
 });
 
-gulp.task('html', function() {
-  return gulp.src(src.html)
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('build/'))
-    .pipe(connect.reload());
-
-});
-
 gulp.task('watch', function() {
-  gulp.watch(src.scripts, ['scripts']);
+  gulp.watch(src.html, ['html']);
   gulp.watch(src.images, ['images']);
   gulp.watch(src.styles, ['styles']);
-  gulp.watch(src.html, ['html']);
+  gulp.watch(src.scripts, ['scripts']);
 });
 
 gulp.task('connect', function() {
@@ -71,6 +58,5 @@ gulp.task('deploy', ['build'], function () {
     .pipe(deploy());
 });
 
-gulp.task('default', ['connect', 'watch', 'scripts', 'images', 'styles']);
-
-gulp.task('build', ['scripts', 'images', 'styles']);
+gulp.task('default', ['connect', 'watch', 'html', 'images', 'scripts', 'styles']);
+gulp.task('build', ['html', 'images', 'scripts', 'styles']);
