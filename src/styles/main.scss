@@ -524,3 +524,7 @@ footer {
         font-size: 25px;
     }
 }
+
+body.-prod .-dev {
+    display: none;
+}
