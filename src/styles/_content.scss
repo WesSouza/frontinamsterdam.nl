@@ -1,0 +1,83 @@
+.wrapper {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $spacing-sm;
+	padding-right: $spacing-sm;
+	
+	@include respond-equal(md) {
+		width: $break-medium - $spacing-sm;
+	}
+	
+	@include respond-equal(lg) {
+		width: $break-large - $spacing-sm;
+	}
+}
+
+.header {
+	h1 {
+		font-size: em(30);
+		font-weight: $normal;
+		color: $black;
+		margin: 0 0 $spacing-sm 0;
+		text-align: center;
+	}
+	
+	@include respond-equal(sm) {
+		h1 {
+			font-size: em(22);
+		}
+	}
+}
+
+.content {
+	margin-bottom: $spacing-sm;
+	font-size: em(16);
+	
+	h1, h2 {
+		font-size: em(30);
+		font-weight: $normal;
+		color: $black;
+		margin: 0 0 $spacing-sm 0;
+		
+		a {
+			color: $black;
+		}
+	}
+	
+	p {
+		margin: 0 0 $spacing-sm 0;
+		line-height: 1.8;
+	}
+	
+	h2 {
+		font-size: em(20);
+		
+		@include respond-equal(sm) {
+			font-size: em(18);
+		}
+	}
+	
+	@include respond-equal(sm) {
+		h1 {
+			font-size: em(22);
+		}
+		
+		h2 {
+			font-size: em(16);
+		}
+	}
+}
+
+.list-linear,
+.list-stacked {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.list-linear {
+	&, > li {
+		display: inline-block;
+	}
+}

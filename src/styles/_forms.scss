@@ -1,0 +1,85 @@
+.input {
+	line-height: 21px;
+	margin: 0;
+	padding: 10px 2px;
+	border: 1px solid $gray;
+	background-color: $white;
+	vertical-align: top;
+	
+	&:hover, &:focus {
+		padding-bottom: 9px;
+		border-bottom-width: 2px;
+		border-bottom-color: $gray;
+		outline: 0;
+	}
+	
+	&:invalid:focus {
+		border-color: $gray;
+	}
+	
+	&[disabled] {
+		color: $gray;
+		background-color: $gray;
+		
+		&:hover, &:focus {
+			padding-bottom: 10px;
+			border-bottom-width: 1px;
+			border-bottom-color: $gray;
+		}
+	}
+}
+
+.btn-default,
+.btn-info,
+.btn-primary,
+.btn-danger {
+	line-height: 21px;
+	margin: 0;
+	padding: 11px;
+	border: 0 solid $black;
+	background-color: $gray;
+	color: $white;
+	vertical-align: top;
+	font-weight: $bold;
+	text-decoration: none;
+	cursor: pointer;
+	
+	&:hover, &:focus, &:active {
+		padding-bottom: 8px;
+		border-bottom-width: 2px;
+		outline: 0;
+	}
+	
+	&:active {
+		border-top-width: 2px;
+		border-bottom-width: 0;
+		background-color: $gray;
+	}
+}
+
+.btn-info {
+	border-color: $red;
+	background-color: $red;
+	
+	&:active {
+		background-color: $red;
+	}
+}
+
+.btn-primary {
+	border-color: $red;
+	background-color: $red;
+	
+	&:active {
+		background-color: $red;
+	}
+}
+
+.btn-danger {
+	border-color: $red;
+	background-color: $red;
+	
+	&:active {
+		background-color: $red;
+	}
+}
