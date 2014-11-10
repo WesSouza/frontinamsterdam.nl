@@ -3,31 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-	<!-- <link rel="stylesheet" href="styles/main.css"> -->
-	<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300"> -->
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,700">
 	<title>Front in Amsterdam &ndash; Spring 2015</title>
 </head>
-<body class="-pre-event">
+<body class="-pre-event" data-component="google-analytics">
 
-	<header class="section section-hero">
-		<div class="wrapper">
-			<div class="section-figure">
-				<img class="section-hero-logo" alt="Front in Amsterdam 2015">
-			</div>
-			<div class="section-text">
-				<p>Spring 2015 &ndash; Amsterdam &ndash; NL</p>
-				<a class="btn btn-primary" href="#">Register interest</a>
-				<form action="" data-component="section-hero-register">
+	<header class="section section-hero" data-component="toggle">
+		<div class="wrapper grid">
+			<div class="section-figure hidden-sm width-1-2 align-middle">
+				<img class="hero-logo" src="./images/fia-shield.png" alt="Front in Amsterdam">
+				<h1 class="hero-logo-text">Front in<br>Amsterdam</h1>
+			</div><div class="section-text width-1-1 width-md-1-2 text-center align-middle">
+				<p class="hero-teaser">Spring 2015 &ndash; Amsterdam &ndash; NL</p>
+				<a class="hero-btn-register btn btn-primary" href="#" data-toggle=".hero-form, .hero-btn-register">Register interest</a>
+				<form class="hero-form" action="" hidden data-component="newsletter-register">
 					<input class="input-text" type="email" name="email" placeholder="Your e-mail address">
-					<button class="btn btn-primary" type="submit">Register</button>
+					<button class="btn-primary" type="submit">Register</button>
 				</form>
 			</div>
 		</div>
 	</header>
 
-	<nav class="nav" role="navigation">
-		<div class="nav-logo" hidden>
-			<img class="nav-logo-img" alt="Front in Amsterdam">
+	<nav class="nav" role="navigation" data-component="navigation">
+		<div class="nav-logo">
+			<img class="nav-logo-img" src="./images/fia-shield.png" alt="Front in Amsterdam">
 		</div>
 		<ul class="nav-menu">
 			<li class="nav-item"><a href="#Become-a-Speaker">Become a Speaker</a></li>
@@ -38,47 +38,42 @@
 			<li class="nav-item -tbd"><a href="#Sponsors">Sponsors</a></li>
 			<li class="nav-item"><a href="#Organizers">Organizers</a></li>
 		</ul>
-		<button class="nav-open btn" hidden>Menu</button>
+		<button class="nav-open btn-default">Menu</button>
 	</nav>
 
 	<section class="section section-speak" id="Become-a-Speaker">
-		<div class="wrapper">
+		<div class="wrapper text-center">
 			<h1 class="section-title">Become a Speaker</h1>
-			<p>We are brewing a fantastic list of speakers for you. In the mean time, if you are passionate and keen to speak about something you really like and excel, we would <em>love</em> to hear from you.</p>
+			<p>We are brewing a fantastic list of speakers for you. In the meantime, if you are passionate and keen to speak about something you really like and excel, we would <em>love</em> to hear from you.</p>
 			<p><a class="btn" href="mailto:papers@frontinamsterdam.com">Submit to the call for papers</a></p>
 		</div>
 	</section>
 
 	<section class="section section-speakers -dev" id="Speakers">
-		<div class="wrapper">
+		<div class="wrapper text-center">
 			<h1 class="section-title">Speakers</h1>
-			<div class="speaker-list">
-				<article class="speaker">
+			<div class="speaker-list grid grid-padded">
+				<article class="speaker width-1-1 width-md-1-2 width-lg-1-3">
 					<img class="speaker-photo" alt="Speaker Name">
 					<h1 class="speaker-name">Speaker Name</h1>
 					<p class="speaker-bio">Here we'll have the speaker bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="speaker">
+				</article><article class="speaker width-1-1 width-md-1-2 width-lg-1-3">
 					<img class="speaker-photo" alt="Speaker Name">
 					<h1 class="speaker-name">Speaker Name</h1>
 					<p class="speaker-bio">Here we'll have the speaker bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="speaker">
+				</article><article class="speaker width-1-1 width-md-1-2 width-lg-1-3">
 					<img class="speaker-photo" alt="Speaker Name">
 					<h1 class="speaker-name">Speaker Name</h1>
 					<p class="speaker-bio">Here we'll have the speaker bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="speaker">
+				</article><article class="speaker width-1-1 width-md-1-2 width-lg-1-3">
 					<img class="speaker-photo" alt="Speaker Name">
 					<h1 class="speaker-name">Speaker Name</h1>
 					<p class="speaker-bio">Here we'll have the speaker bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="speaker">
+				</article><article class="speaker width-1-1 width-md-1-2 width-lg-1-3">
 					<img class="speaker-photo" alt="Speaker Name">
 					<h1 class="speaker-name">Speaker Name</h1>
 					<p class="speaker-bio">Here we'll have the speaker bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="speaker">
+				</article><article class="speaker width-1-1 width-md-1-2 width-lg-1-3">
 					<img class="speaker-photo" alt="Speaker Name">
 					<h1 class="speaker-name">Speaker Name</h1>
 					<p class="speaker-bio">Here we'll have the speaker bio with a link to <a href="">their project</a></p>
@@ -88,7 +83,7 @@
 	</section>
 
 	<section class="section section-location -dev" id="Location">
-		<div class="wrapper">
+		<div class="wrapper text-center">
 			(here is a map, look how nice and dynamic and interactive it is)
 		</div>
 	</section>
@@ -125,7 +120,7 @@
 	</section>
 
 	<section class="section section-sponsor-us" id="Sponsor-Us">
-		<div class="wrapper">
+		<div class="wrapper text-center">
 			<h1 class="section-title">Sponsor Us</h1>
 			<p>We are working hard to bring a fantastic community event to life. We are aiming at an amazing experience for the best web professionals in the market. Sponsor us to be part of this event, and benefit from this unique environment.</p>
 			<p><a class="btn" href="sponsor@frontinamsterdam.com">Learn more about sponsoring Front in Amsterdam</a></p>
@@ -133,71 +128,62 @@
 	</section>
 
 	<section class="section section-sponsors" id="Sponsors">
-		<div class="wrapper">
+		<div class="wrapper text-center">
 			<h1 class="section-title">Sponsors</h1>
 			<p>Here are our partners that made this awesome experience possible:</p>
-			<div class="sponsors-list">
-				<article class="sponsor sponsor-gold">
+			<div class="sponsors-list grid grid-padded">
+				<article class="sponsor sponsor-gold width-1-1">
 					<a href=""><img class="sponsor-image" alt="Sponsor Name"></a>
-				</article>
-				<article class="sponsor sponsor-silver">
+				</article><article class="sponsor sponsor-silver width-1-1">
 					<a href=""><img class="sponsor-image" alt="Sponsor Name"></a>
-				</article>
-				<article class="sponsor sponsor-bronze">
+				</article><article class="sponsor sponsor-bronze width-1-1 width-md-1-4">
 					<a href=""><img class="sponsor-image" alt="Sponsor Name"></a>
-				</article>
-				<article class="sponsor sponsor-bronze">
+				</article><article class="sponsor sponsor-bronze width-1-1 width-md-1-4">
 					<a href=""><img class="sponsor-image" alt="Sponsor Name"></a>
-				</article>
-				<article class="sponsor sponsor-bronze">
+				</article><article class="sponsor sponsor-bronze width-1-1 width-md-1-4">
 					<a href=""><img class="sponsor-image" alt="Sponsor Name"></a>
-				</article>
-				<article class="sponsor sponsor-bronze">
+				</article><article class="sponsor sponsor-bronze width-1-1 width-md-1-4">
 					<a href=""><img class="sponsor-image" alt="Sponsor Name"></a>
 				</article>
 			</div>
 		</div>
 	</section>
 
-	<section class="section section-organizers -dev" id="Organizers">
+	<section class="section section-organizers text-center -dev" id="Organizers">
 		<div class="wrapper">
 			<h1 class="section-title">Organizers</h1>
 			<p>Front in Amsterdam is brought to you by these hard working, crazy ones:</p>
-			<div class="organizer-list">
-				<article class="organizer">
-					<img class="organizer-photo" alt="Bruno Passos">
+			<div class="organizers grid grid-padded">
+				<article class="organizer width-1-1 width-md-1-3 width-lg-1-5">
+					<img class="organizer-photo" src="https://graph.facebook.com/passosbruno/picture?type=large&amp;width=200&amp;height=200" alt="Bruno Passos">
 					<h1 class="organizer-name">Bruno Passos</h1>
-					<p class="organizer-bio">Here we'll have the organizer bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="organizer">
-					<img class="organizer-photo" alt="Caio Gondim">
+					<p class="organizer-bio">Brazilian Web designer and front-end developer at http://booking.com , I am a father and husband and in love with the web!</p>
+				</article><article class="organizer width-md-1-3 width-lg-1-5">
+					<img class="organizer-photo" src="https://graph.facebook.com/caiogondim/picture?type=large&amp;width=200&amp;height=200" alt="Caio Gondim">
 					<h1 class="organizer-name">Caio Gondim</h1>
-					<p class="organizer-bio">Here we'll have the organizer bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="organizer">
-					<img class="organizer-photo" alt="Eduardo Shiota">
+					<p class="organizer-bio">web developer working at @bookingcom ex @globocom blogging at @loopinfinito</p>
+				</article><article class="organizer width-md-1-3 width-lg-1-5">
+					<img class="organizer-photo" src="https://graph.facebook.com/eduardo.shiota/picture?type=large&amp;width=200&amp;height=200" alt="Eduardo Shiota">
 					<h1 class="organizer-name">Eduardo Shiota</h1>
-					<p class="organizer-bio">Here we'll have the organizer bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="organizer">
-					<img class="organizer-photo" alt="Ricardo Tomasi">
+					<p class="organizer-bio">A Designer/Front-end Engineer at Booking, living in Amsterdam. Works with the web, loves @darkdiva and the cats, and hates parsley.</p>
+				</article><article class="organizer width-md-1-2 width-lg-1-5">
+					<img class="organizer-photo" src="https://graph.facebook.com/ricardobeat/picture?type=large&amp;width=200&amp;height=200" alt="Ricardo Tomasi">
 					<h1 class="organizer-name">Ricardo Tomasi</h1>
-					<p class="organizer-bio">Here we'll have the organizer bio with a link to <a href="">their project</a></p>
-				</article>
-				<article class="organizer">
-					<img class="organizer-photo" alt="Wesley de Souza">
+					<p class="organizer-bio">Software developer &amp; javascript addict, appreciator of artisanal, single-origin git repos.</p>
+				</article><article class="organizer width-md-1-2 width-lg-1-5">
+					<img class="organizer-photo" src="https://graph.facebook.com/wesley.souza/picture?type=large&amp;width=200&amp;height=200" alt="Wesley de Souza">
 					<h1 class="organizer-name">Wesley de Souza</h1>
-					<p class="organizer-bio">Here we'll have the organizer bio with a link to <a href="">their project</a></p>
+					<p class="organizer-bio">Web developer, restless innovator, crazy guy.</p>
 				</article>
 			</div>
 			<p><a class="btn" href="mailto:contact@frontinamsterdam.com">Talk to us :)</a></p>
 		</div>
 	</section>
 
-	<footer class="section section-footer">
+	<footer class="section section-footer text-center">
 		<div class="wrapper">&copy; 2014 Front in Amsterdam</div>
 	</footer>
 
-	<!-- <script src="scripts/main.js"></script> -->
+	<script src="scripts/main.js"></script>
 </body>
 </html>

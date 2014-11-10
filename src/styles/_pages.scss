@@ -1,0 +1,26 @@
+.section-hero {
+	color: $white;
+	height: 600px;
+	background: #e9e0df url('../images/amsterdam.jpg') center center no-repeat;
+	background-size: cover;
+	box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.6);
+	
+	.wrapper {
+		height: 100%;
+	}
+	
+	.section-figure {
+		height: 100%;
+	}
+}
+
+.hero-logo {
+	width: 300px;
+	@include respond-equal(md) {
+		width: 200px;
+	}
+}
+
+.hero-form {
+	
+}
