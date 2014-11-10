@@ -14,29 +14,29 @@ var src = {
 };
 
 gulp.task('html', function() {
-  return gulp.src(src.html)
-    //.pipe(plumber())
+  gulp.src(src.html)
+    .pipe(plumber())
     .pipe(gulp.dest('build/'))
     .pipe(connect.reload());
 });
 
 gulp.task('images', function() {
-  return gulp.src(src.images)
-    //.pipe(plumber())
+  gulp.src(src.images)
+    .pipe(plumber())
     .pipe(gulp.dest('build/images'))
     .pipe(connect.reload());
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(src.scripts)
-    //.pipe(plumber())
+  gulp.src(src.scripts)
+    .pipe(plumber())
     .pipe(concat('main.js'))
     .pipe(gulp.dest('build/scripts'));
 });
 
 gulp.task('styles', function() {
-  return gulp.src('src/styles/main.scss')
-    //.pipe(plumber())
+  gulp.src('src/styles/main.scss')
+    .pipe(plumber())
     .pipe(sass())
     .pipe(combinemq())
     .pipe(gulp.dest('build/styles'))
