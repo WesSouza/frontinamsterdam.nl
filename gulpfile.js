@@ -7,7 +7,7 @@ var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 
 var src = {
-  html: 'src/index.html',
+  html: [ 'src/index.html', 'src/CNAME' ],
   images: 'src/images/**',
   scripts: 'src/scripts/*.js',
   styles: 'src/styles/*.scss'
