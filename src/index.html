@@ -11,9 +11,11 @@
 
 	<header class="section section-hero" data-component="toggle">
 		<div class="wrapper grid">
-			<div class="section-figure hidden-sm width-1-2 align-middle">
-				<img class="hero-logo" src="./images/fia-shield.png" alt="Front in Amsterdam">
-				<h1 class="hero-logo-text">Front in<br>Amsterdam</h1>
+			<div class="align-middle-filler"></div><div class="section-figure hidden-sm width-1-2 align-middle">
+				<figure class="hero-logo">
+					<img class="hero-logo-img" src="./images/fia-shield.png" alt="Front in Amsterdam">
+					<h1 class="hero-logo-text">Front in<br>Amsterdam</h1>
+				</figure>
 			</div><div class="section-text width-1-1 width-md-1-2 text-center align-middle">
 				<p class="hero-teaser">Spring 2015 &ndash; Amsterdam &ndash; NL</p>
 				<a class="hero-btn-register btn btn-primary" href="#" data-toggle=".hero-form, .hero-btn-register">Register interest</a>
@@ -26,19 +28,22 @@
 	</header>
 
 	<nav class="nav" role="navigation" data-component="navigation">
-		<div class="nav-logo">
-			<img class="nav-logo-img" src="./images/fia-shield.png" alt="Front in Amsterdam">
+		<div class="wrapper">
+			<div class="nav-logo">
+				<img class="nav-logo-img" src="./images/fia-shield.png" alt="Front in Amsterdam">
+			</div>
+			<ul class="nav-menu list-linear">
+				<li class="nav-item"><a href="#Become-a-Speaker">Become a Speaker</a></li>
+				<li class="nav-item -tbd"><a href="#Speakers">Speakers</a></li>
+				<li class="nav-item -tbd"><a href="#Location">Location</a></li>
+				<li class="nav-item -tbd"><a href="#Schedule">Schedule</a></li>
+				<li class="nav-item"><a href="#Sponsor-Us">Sponsor Us</a></li>
+				<li class="nav-item -tbd"><a href="#Sponsors">Sponsors</a></li>
+				<li class="nav-item"><a href="#Organizers">Organizers</a></li>
+			</ul>
+			<button class="nav-open btn-default">Menu</button>
+			<button class="nav-cta btn-primary">Register</button>
 		</div>
-		<ul class="nav-menu">
-			<li class="nav-item"><a href="#Become-a-Speaker">Become a Speaker</a></li>
-			<li class="nav-item -tbd"><a href="#Speakers">Speakers</a></li>
-			<li class="nav-item -tbd"><a href="#Location">Location</a></li>
-			<li class="nav-item -tbd"><a href="#Schedule">Schedule</a></li>
-			<li class="nav-item"><a href="#Sponsor-Us">Sponsor Us</a></li>
-			<li class="nav-item -tbd"><a href="#Sponsors">Sponsors</a></li>
-			<li class="nav-item"><a href="#Organizers">Organizers</a></li>
-		</ul>
-		<button class="nav-open btn-default">Menu</button>
 	</nav>
 
 	<section class="section section-speak" id="Become-a-Speaker">
@@ -184,6 +189,6 @@
 		<div class="wrapper">&copy; 2014 Front in Amsterdam</div>
 	</footer>
 
-	<script src="scripts/main.js"></script>
+	<script src="scripts/main.js" async></script>
 </body>
 </html>

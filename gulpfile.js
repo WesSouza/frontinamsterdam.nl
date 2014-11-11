@@ -31,7 +31,8 @@ gulp.task('scripts', function() {
   gulp.src(src.scripts)
     .pipe(plumber())
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('build/scripts'));
+    .pipe(gulp.dest('build/scripts'))
+    .pipe(connect.reload());
 });
 
 gulp.task('styles', function() {

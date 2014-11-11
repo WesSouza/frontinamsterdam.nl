@@ -1,26 +1,54 @@
 .section-hero {
 	color: $white;
-	height: 600px;
-	background: #e9e0df url('../images/amsterdam.jpg') center center no-repeat;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../images/amsterdam.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.6);
-	
-	.wrapper {
-		height: 100%;
+
+	@include respond-larger(md) {
+		padding-bottom: $nav-height-lg;
 	}
-	
-	.section-figure {
+
+	.wrapper {
 		height: 100%;
 	}
 }
 
 .hero-logo {
-	width: 300px;
+	margin: 0;
+}
+
+.hero-logo-img,
+.hero-logo-text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hero-logo-img {
+	width: 200px;
+	margin-right: 20px;
+
 	@include respond-equal(md) {
-		width: 200px;
+		width: 100px;
 	}
 }
 
-.hero-form {
-	
+.hero-logo-text,
+.hero-teaser {
+	font-weight: $bold;
+	text-shadow: 0px 3px 1px rgba(0,0,0,0.2), 0px -1px 1px rgba(0,0,0,0.2);
+}
+
+.hero-logo-text {
+	font-size: em(40);
+
+	@include respond-equal(md) {
+		font-size: em(30);
+	}
+}
+
+.hero-teaser {
+	font-size: em(20);
+	margin: 0 0 30px 0;
 }

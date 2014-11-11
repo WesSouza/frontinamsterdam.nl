@@ -1,3 +1,40 @@
+.nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: $nav-height-lg;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: $white;
+
+	&.-fixed {
+		position: fixed;
+		top: 0;
+		bottom: inherit;
+	}
+}
+
+.nav-menu {
+	margin: 0 auto;
+}
+
+.nav-logo {
+	display: none;
+}
+
+.nav-open {
+	@include respond-larger(md) {
+		display: none;
+	}
+}
+
+.nav-cta {
+	@include respond-larger(md) {
+		display: none;
+	}
+}
+
+
 .main-nav {
 	position: fixed;
 	z-index: 10;
