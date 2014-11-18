@@ -39,10 +39,12 @@
 	padding: 12px 40px;
 	border: 2px solid $red;
 	border-radius: 3px;
-	background-color: $white;
+	background-color: transparent;
 	color: $red;
 	vertical-align: top;
+	font-size: em(14);
 	font-weight: $bold;
+	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
 	
@@ -55,6 +57,10 @@
 	&:active {
 		background-color: $dark-red;
 	}
+}
+
+.btn-small {
+	padding: 6px 20px;
 }
 
 .btn-info {

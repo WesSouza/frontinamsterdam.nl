@@ -3,32 +3,126 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: $nav-height-lg;
+	min-height: $nav-height-lg;
 	background-color: rgba(0, 0, 0, 0.8);
 	color: $white;
+
+	.wrapper {
+		position: relative;
+	}
+
+	@include respond-equal(sm) {
+		position: fixed;
+		top: 0;
+		bottom: auto;
+	}
 
 	&.-fixed {
 		position: fixed;
 		top: 0;
-		bottom: inherit;
+		bottom: auto;
+
+		.logo-nav,
+		.nav-cta {
+			opacity: 1;
+		}
 	}
 }
 
-.nav-menu {
-	margin: 0 auto;
-}
-
-.nav-logo {
-	display: none;
-}
-
+.logo-nav,
+.nav-cta,
 .nav-open {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.5s ease;
+
 	@include respond-larger(md) {
+		opacity: 0;
+	}
+
+	@include respond-equal(sm) {
+		left: 10px;
+	}
+}
+
+.logo-nav {
+	.logo-img {
+		width: 60px;
+		margin-right: 5px;
+	}
+
+	.logo-text {
+		margin-top: -7px;
+		font-size: em(14);
+		text-align: left;
+		font-weight: $bold;
+	}
+}
+
+.nav-cta,
+.nav-open {
+	top: 11px;
+	left: auto;
+	right: 0;
+
+	@include respond-equal(sm) {
+		left: auto;
+		right: 10px;
+	}
+}
+
+@include respond-equal(sm) {
+	.nav-cta {
 		display: none;
 	}
 }
 
-.nav-cta {
+.nav-menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 auto;
+
+	@include respond-larger(md) {
+		padding: 0 100px;
+	}
+
+	@include respond-equal(sm) {
+		display: none;
+		margin-top: $nav-height-lg;
+
+		&.-opened {
+			display: block;
+		}
+	}
+}
+
+.nav-item {
+	line-height: $nav-height-lg;
+	margin: 0 20px;
+	font-size: em(13);
+	font-weight: $bold;
+	text-transform: uppercase;
+
+	&, a {
+		color: $gray;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: $red;
+	}
+
+	@include respond-larger(md) {
+		display: inline-block;
+	}
+
+	@include respond-equal(md) {
+		margin: 0 10px;
+	}
+}
+
+.nav-open {
 	@include respond-larger(md) {
 		display: none;
 	}

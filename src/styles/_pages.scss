@@ -1,13 +1,18 @@
 .section-hero {
 	color: $white;
-	height: 100vh;
 	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../images/amsterdam.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	@include respond-larger(md) {
+		height: 100vh;
 		padding-bottom: $nav-height-lg;
+	}
+
+	@include respond-equal(sm) {
+		height: 400px;
+		padding-top: $nav-height-lg;
 	}
 
 	.wrapper {
@@ -15,17 +20,17 @@
 	}
 }
 
-.hero-logo {
+.logo {
 	margin: 0;
 }
 
-.hero-logo-img,
-.hero-logo-text {
+.logo-img,
+.logo-text {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.hero-logo-img {
+.logo-img {
 	width: 200px;
 	margin-right: 20px;
 
@@ -34,13 +39,14 @@
 	}
 }
 
-.hero-logo-text,
+.logo-text,
 .hero-teaser {
 	font-weight: $bold;
 	text-shadow: 0px 3px 1px rgba(0,0,0,0.2), 0px -1px 1px rgba(0,0,0,0.2);
 }
 
-.hero-logo-text {
+.logo-text {
+	margin: 0;
 	font-size: em(40);
 
 	@include respond-equal(md) {

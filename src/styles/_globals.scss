@@ -24,7 +24,6 @@ body {
 
 	@include respond-equal(sm) {
 		font-size: em($size-sm);
-		padding-top: $nav-height-sm + $spacing-sm;
 	}
 }
 
@@ -43,4 +42,16 @@ a:hover {
 
 strong, b {
 	font-weight: $bold;
+}
+
+.-tbd {
+	body.-shhh & {
+		display: none;
+	}
+}
+
+.-pre-event {
+	body.-lets-go & {
+		display: none;
+	}
 }
