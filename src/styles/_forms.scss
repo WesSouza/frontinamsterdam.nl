@@ -33,45 +33,46 @@
 .btn-info,
 .btn-primary,
 .btn-danger {
+	@extend a;
 	line-height: 21px;
 	margin: 0;
-	padding: 11px;
-	border: 0 solid $black;
-	background-color: $gray;
-	color: $white;
+	padding: 12px 40px;
+	border: 2px solid $red;
+	border-radius: 3px;
+	background-color: $white;
+	color: $red;
 	vertical-align: top;
 	font-weight: $bold;
 	text-decoration: none;
 	cursor: pointer;
 	
 	&:hover, &:focus, &:active {
-		padding-bottom: 8px;
-		border-bottom-width: 2px;
+		color: $white;
+		background-color: $red;
 		outline: 0;
 	}
 	
 	&:active {
-		border-top-width: 2px;
-		border-bottom-width: 0;
-		background-color: $gray;
+		background-color: $dark-red;
 	}
 }
 
 .btn-info {
-	border-color: $red;
+	color: $white;
 	background-color: $red;
 	
 	&:active {
-		background-color: $red;
+		background-color: $dark-red;
 	}
 }
 
 .btn-primary {
-	border-color: $red;
+	color: $white;
+	border-color: transparent;
 	background-color: $red;
 	
-	&:active {
-		background-color: $red;
+	&:hover, &:focus, &:active {
+		background-color: $dark-red;
 	}
 }
 
