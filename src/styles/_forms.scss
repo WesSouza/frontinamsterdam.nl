@@ -5,22 +5,22 @@
 	border: 1px solid $gray;
 	background-color: $white;
 	vertical-align: top;
-	
+
 	&:hover, &:focus {
 		padding-bottom: 9px;
 		border-bottom-width: 2px;
 		border-bottom-color: $gray;
 		outline: 0;
 	}
-	
+
 	&:invalid:focus {
 		border-color: $gray;
 	}
-	
+
 	&[disabled] {
 		color: $gray;
 		background-color: $gray;
-		
+
 		&:hover, &:focus {
 			padding-bottom: 10px;
 			border-bottom-width: 1px;
@@ -34,6 +34,7 @@
 .btn-primary,
 .btn-danger {
 	@extend a;
+	display: inline-block;
 	line-height: 21px;
 	margin: 0;
 	padding: 12px 40px;
@@ -47,13 +48,13 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
-	
+
 	&:hover, &:focus, &:active {
 		color: $white;
 		background-color: $red;
 		outline: 0;
 	}
-	
+
 	&:active {
 		background-color: $dark-red;
 	}
@@ -66,7 +67,7 @@
 .btn-info {
 	color: $white;
 	background-color: $red;
-	
+
 	&:active {
 		background-color: $dark-red;
 	}
@@ -76,7 +77,7 @@
 	color: $white;
 	border-color: transparent;
 	background-color: $red;
-	
+
 	&:hover, &:focus, &:active {
 		background-color: $dark-red;
 	}
@@ -85,7 +86,7 @@
 .btn-danger {
 	border-color: $red;
 	background-color: $red;
-	
+
 	&:active {
 		background-color: $red;
 	}

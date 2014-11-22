@@ -40,11 +40,11 @@ body .align-middle-filler {
 	margin-right: auto;
 	padding-left: $spacing-sm;
 	padding-right: $spacing-sm;
-	
+
 	@include respond-equal(md) {
 		width: $break-medium - $spacing-sm;
 	}
-	
+
 	@include respond-equal(lg) {
 		width: $break-large - $spacing-sm;
 	}
@@ -54,7 +54,7 @@ body .align-middle-filler {
 	padding-left: $spacing-lg;
 	padding-right: $spacing-lg;
 	padding-bottom: $spacing-lg;
-	
+
 	@include respond-equal(sm) {
 		padding-left: $spacing-sm;
 		padding-right: $spacing-sm;

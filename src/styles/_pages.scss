@@ -1,3 +1,64 @@
+.section {
+	color: $dark-gray;
+
+	h1, p {
+		margin-top: $spacing-lg;
+		margin-bottom: $spacing-lg;
+	}
+
+	.wrapper {
+		padding-top: $spacing-sm;
+		padding-bottom: $spacing-sm;
+	}
+}
+
+.section-title {
+	position: relative;
+	font-size: em(16);
+	margin: 0 auto;
+	max-width: $break-medium + $spacing-lg;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $light-gray;
+		z-index: 1;
+	}
+
+	span {
+		position: relative;
+		display: inline-block;
+		padding: 0 $spacing-lg;
+		font-size: em(30);
+		color: $black;
+		font-weight: $normal;
+		text-transform: uppercase;
+		background-color: $white;
+		z-index: 2;
+
+		@include respond-equal(sm) {
+			font-size: em(22);
+			padding: 0 $spacing-sm;
+		}
+	}
+}
+
+.section-text {
+	@include respond-larger(md) {
+		line-height: 1.7;
+	}
+
+	@include respond-equal(lg) {
+		margin: 0 auto;
+		max-width: $break-medium - $spacing-sm;
+	}
+}
+
 .section-hero {
 	color: $white;
 	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../images/amsterdam.jpg');
@@ -16,6 +77,7 @@
 	}
 
 	.wrapper {
+		padding: 0;
 		height: 100%;
 	}
 }
@@ -39,13 +101,8 @@
 	}
 }
 
-.logo-text,
-.hero-teaser {
-	font-weight: $bold;
-	text-shadow: 0px 3px 1px rgba(0,0,0,0.2), 0px -1px 1px rgba(0,0,0,0.2);
-}
-
 .logo-text {
+	@extend %hero-shadow;
 	margin: 0;
 	font-size: em(40);
 
@@ -54,7 +111,13 @@
 	}
 }
 
+%hero-shadow {
+	font-weight: $bold;
+	text-shadow: 0px 3px 1px rgba(0,0,0,0.2), 0px -1px 1px rgba(0,0,0,0.2);
+}
+
 .hero-teaser {
+	@extend %hero-shadow;
 	font-size: em(20);
 	margin: 0 0 30px 0;
 }
