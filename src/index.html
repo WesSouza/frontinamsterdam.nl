@@ -18,7 +18,7 @@
 				</figure>
 			</div><div class="section-text width-1-1 width-md-1-2 text-center align-middle">
 				<p class="hero-teaser">Spring 2015 &ndash; Amsterdam &ndash; NL</p>
-				<a class="hero-btn-register btn btn-primary" href="#Register" data-toggle=".hero-form, .hero-btn-register" onclick="alert('This is a work in progress, come back in a while.');return false">Register interest</a>
+				<a class="hero-btn-register btn btn-primary" href="#Register" data-toggle=".hero-form, .hero-btn-register">Register interest</a>
 			</div>
 		</div>
 	</header>
@@ -36,9 +36,9 @@
 				<li class="nav-item -tbd"><a href="#Schedule">Schedule</a></li>
 				<li class="nav-item -pre-event"><a href="#Sponsor-Us">Sponsor Us</a></li>
 				<li class="nav-item -tbd"><a href="#Sponsors">Sponsors</a></li>
-				<li class="nav-item visible-sm"><a href="#Register" onclick="alert('This is a work in progress, come back in a while.');return false">Register</a></li>
+				<li class="nav-item visible-sm"><a href="#Register">Register</a></li>
 			</ul>
-			<a href="#Register" class="nav-cta btn-primary btn-small" onclick="alert('This is a work in progress, come back in a while.');return false">Register</a>
+			<a href="#Register" class="nav-cta btn-primary btn-small">Register</a>
 			<button class="nav-open btn-default btn-small">Menu</button>
 		</div>
 	</nav>
@@ -154,6 +154,28 @@
 					<a href=""><img class="sponsor-image" alt="Sponsor Name"></a>
 				</article>
 			</div>
+		</div>
+	</section>
+
+	<section class="section section-register text-center" id="Regsiter">
+		<div class="wrapper">
+			<h1 class="section-title"><span>Register interest</span></h1>
+			<div class="section-text">
+				<p>Enter your details below and we'll keep you informed about new developments from Front in Amsterdam.</p>
+			</div>
+			<form class="form" action="./" method="post" data-component="form" class="section-text" onsubmit="alert('This is a work in progress, come back in a while.');return false">
+				<div class="form-field">
+					<div class="form-label">Your name</div>
+					<input class="form-input" type="text" required>
+				</div>
+				<div class="form-field">
+					<div class="form-label">Your e-mail address</div>
+					<input class="form-input" type="email" required>
+				</div>
+				<div class="form-footer">
+					<button class="btn-primary" type="submit">Register</button>
+				</div>
+			</form>
 		</div>
 	</section>
 
