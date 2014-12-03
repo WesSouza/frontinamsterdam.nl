@@ -4,6 +4,7 @@ require( 'components' ).create( 'navigation', {
 		window.addEventListener( 'resize', this.calculatePositions.bind( this ) );
 
 		this.$el.find( '.nav-open' ).on( 'click', this.menuToggle.bind( this ) )
+		this.$el.find( 'a' ).on( 'click', this.menuClose.bind( this ) )
 
 		this.calculatePositions();
 	},
@@ -29,6 +30,13 @@ require( 'components' ).create( 'navigation', {
 
 	menuToggle: function ( event ) {
 		event.preventDefault();
+		event.stopPropagation();
 		this.$el.find( '.nav-menu' ).toggleClass( '-opened' );
+	},
+
+	menuClose: function ( event ) {
+		if ( this.small ) {
+			this.$el.find( '.nav-menu' ).removeClass( '-opened' );
+		}
 	}
 } );
