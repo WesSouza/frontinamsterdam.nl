@@ -122,6 +122,17 @@
 	margin: 0 0 30px 0;
 }
 
+.section-organizers {
+	.organizer-name {
+		font-size: em(16);
+		text-transform: uppercase;
+	}
+
+	.organizer-photo {
+		border-radius: 50%;
+	}
+}
+
 .section-footer {
 	font-size: em(14);
 	color: $white;
