@@ -10,9 +10,16 @@ require( 'components' ).create( 'navigation', {
 	},
 
 	calculatePositions: function ( ) {
+		if ( this.navFixed ) {
+			this.$el.removeClass( '-fixed' );
+			this.navFixed = false;
+		}
+
 		this.small = Rye( '.nav-open', this.el ).css( 'display' ) != 'none';
 		this.navTop = this.el.getBoundingClientRect().top + document.body.scrollTop;
 		this.navHeight = this.el.offsetHeight;
+
+		this.scrolled();
 	},
 
 	scrolled: function ( ) {
