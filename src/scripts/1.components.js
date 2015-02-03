@@ -28,8 +28,6 @@ define('components', function () {
 	var _each  = Array.prototype.forEach
 	var _slice = Array.prototype.slice
 	var _extend = Rye.require('Util').extend;
-	var uid    = 0
-	var compo  = {}
 
 	function init (context) {
 		var elements = (context || document).querySelectorAll('[data-component]')
