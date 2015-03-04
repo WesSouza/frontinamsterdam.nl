@@ -1,37 +1,75 @@
-.form-field-on-sky-with-diamonds {
-	position: absolute;
-	left: -5000px;
+.form-register {
+	.form-input {
+		width: 200px;
+	}
 }
 
-.input {
+.form-inline {
+	display: inline-block;
+	margin: 0 auto;
+
+	@include respond-larger(md) {
+		.form-field,
+		.form-footer {
+			float: left;
+		}
+	}
+}
+
+.form-field,
+.form-footer {
+	position: relative;
+	margin: 10px;
+}
+
+.form-label {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+	transition: all 0.2s ease;
+	pointer-events: none;
+}
+
+.form-input {
 	line-height: 21px;
 	margin: 0;
-	padding: 10px 2px;
+	padding: 14px 10px;
 	border: 1px solid $gray;
-	background-color: $white;
+	border-radius: 3px;
+	background-color: transparent;
+	color: $black;
+	font-size: em(16);
 	vertical-align: top;
 
 	&:hover, &:focus {
-		padding-bottom: 9px;
-		border-bottom-width: 2px;
-		border-bottom-color: $gray;
+		border-color: $dark-gray;
 		outline: 0;
-	}
-
-	&:invalid:focus {
-		border-color: $gray;
 	}
 
 	&[disabled] {
 		color: $gray;
 		background-color: $gray;
+	}
+}
 
-		&:hover, &:focus {
-			padding-bottom: 10px;
-			border-bottom-width: 1px;
-			border-bottom-color: $gray;
+.form-field.-has-content {
+	.form-label {
+		font-size: 80%;
+		transform: translateY(-105%);
+
+		@include respond-equal(sm) {
+			transform: translateY(-125%);
 		}
 	}
+	.form-input {
+		padding: 20px 10px 6px;
+	}
+}
+
+.form-field-on-sky-with-diamonds {
+	position: absolute;
+	left: -5000px;
 }
 
 .btn-default,
