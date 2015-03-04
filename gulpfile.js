@@ -1,7 +1,6 @@
 var combinemq = require('gulp-combine-media-queries');
 var concat = require('gulp-concat');
 var connect = require('gulp-connect');
-var deploy = require('gulp-gh-pages');
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
@@ -56,11 +55,6 @@ gulp.task('connect', function() {
     root: 'build',
     livereload: true
   });
-});
-
-gulp.task('deploy', ['build'], function () {
-  return gulp.src('./build/**/*')
-    .pipe(deploy());
 });
 
 gulp.task('default', ['connect', 'watch', 'html', 'images', 'scripts', 'styles']);
