@@ -6,14 +6,14 @@ var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 
 var src = {
-  html: [ 'src/index.html', 'src/CNAME' ],
   images: 'src/images/**',
   scripts: 'src/scripts/*.js',
-  styles: 'src/styles/*.scss'
+  styles: 'src/styles/*.scss',
+  root: [ 'src/index.html', 'src/CNAME' ]
 };
 
-gulp.task('html', function() {
-  gulp.src(src.html)
+gulp.task('root', function() {
+  gulp.src(src.root)
     .pipe(plumber())
     .pipe(gulp.dest('build/'))
     .pipe(connect.reload());
@@ -44,7 +44,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(src.html, ['html']);
+  gulp.watch(src.root, ['root']);
   gulp.watch(src.images, ['images']);
   gulp.watch(src.styles, ['styles']);
   gulp.watch(src.scripts, ['scripts']);
@@ -57,5 +57,5 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('default', ['connect', 'watch', 'html', 'images', 'scripts', 'styles']);
-gulp.task('build', ['html', 'images', 'scripts', 'styles']);
+gulp.task('default', ['connect', 'watch', 'root', 'images', 'scripts', 'styles']);
+gulp.task('build', ['root', 'images', 'scripts', 'styles']);
