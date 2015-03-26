@@ -1,3 +1,4 @@
+var autoprefixer = require('gulp-autoprefixer');
 var combinemq = require('gulp-combine-media-queries');
 var concat = require('gulp-concat');
 var connect = require('gulp-connect');
@@ -9,7 +10,7 @@ var src = {
   images: 'src/images/**',
   scripts: 'src/scripts/*.js',
   styles: 'src/styles/*.scss',
-  root: [ 'src/index.html', 'src/CNAME' ]
+  root: [ 'src/index.html', 'src/CNAME', 'src/Front-in-Amsterdam.ics' ]
 };
 
 gulp.task('root', function() {
@@ -38,6 +39,7 @@ gulp.task('styles', function() {
   gulp.src('src/styles/main.scss')
     .pipe(plumber())
     .pipe(sass())
+    .pipe(autoprefixer( { browsers: [ '> 1%' ] } ))
     .pipe(combinemq())
     .pipe(gulp.dest('build/styles'))
     .pipe(connect.reload());
