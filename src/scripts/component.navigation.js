@@ -9,27 +9,28 @@ require( 'components' ).create( 'navigation', {
 	},
 
 	calculatePositions: function ( ) {
+		var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
 		if ( this.navFixed ) {
 			this.$el.removeClass( '-fixed' );
 			this.navFixed = false;
 		}
 
-		this.navTop = this.el.getBoundingClientRect().top + document.documentElement.scrollTop;
+		this.navTop = this.el.getBoundingClientRect().top + scrollTop;
 		this.navHeight = this.el.offsetHeight;
 
 		this.scrolled();
 	},
 
 	scrolled: function ( ) {
-		if ( !this.small ) {
-			if ( document.documentElement.scrollTop > this.navTop && !this.navFixed ) {
-				this.$el.addClass( '-fixed' );
-				this.navFixed = true;
-			}
-			else if ( document.documentElement.scrollTop <= this.navTop && this.navFixed ) {
-				this.$el.removeClass( '-fixed' );
-				this.navFixed = false;
-			}
+		var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+		if ( scrollTop > this.navTop && !this.navFixed ) {
+			this.$el.addClass( '-fixed' );
+			this.navFixed = true;
+		}
+		else if ( scrollTop <= this.navTop && this.navFixed ) {
+			this.$el.removeClass( '-fixed' );
+			this.navFixed = false;
 		}
 	},
 
