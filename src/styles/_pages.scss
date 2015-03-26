@@ -1,7 +1,7 @@
 .section {
 	color: $dark-gray;
 
-	h1, p {
+	p {
 		margin-top: $spacing-lg;
 		margin-bottom: $spacing-lg;
 	}
@@ -15,7 +15,7 @@
 .section-title {
 	position: relative;
 	font-size: em(16);
-	margin: 0 auto;
+	margin: $spacing-lg auto;
 	max-width: $break-medium + $spacing-lg;
 
 	&::before {
@@ -61,7 +61,7 @@
 
 .section-hero {
 	color: $white;
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../images/amsterdam.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('../images/amsterdam.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -79,47 +79,85 @@
 	.wrapper {
 		padding: 0;
 		height: 100%;
+		text-align: center;
 	}
 }
 
-.logo {
+.hero-logo {
 	margin: 0;
 }
 
-.logo-img,
-.logo-text {
-	display: inline-block;
-	vertical-align: middle;
+.hero-logo-img {
+	width: 160px;
+	margin-bottom: $spacing-lg * 1.1;
 }
 
-.logo-img {
-	width: 200px;
-	margin-right: 20px;
+.hero-logo-text {
+	margin: $spacing-lg 0;
+	font-size: em(60);
+	font-weight: $normal;
+	text-transform: uppercase;
+	text-shadow: 0 2px 0 transparentize( $black, 0.8 );
+}
 
-	@include respond-equal(md) {
-		width: 100px;
+.hero-line {
+	width: 500px;
+	height: 1px;
+	margin: $spacing-lg auto;
+	border: 0;
+	background: linear-gradient(to right,  transparent 0%, $white 50%, transparent 100%);
+}
+
+.hero-ics {
+	display: block;
+	color: $white;
+
+	&:hover {
+		color: transparentize( $white, 0.4 );
 	}
 }
 
-.logo-text {
-	@extend %hero-shadow;
-	margin: 0;
-	font-size: em(40);
+.hero-date-location,
+.hero-location {
+	font-size: em(22);
+	margin: $spacing-sm / 2 0;
+}
 
-	@include respond-equal(md) {
-		font-size: em(30);
+.hero-location {
+	color: $red;
+	font-size: em(16);
+}
+
+@include respond-equal(sm) {
+	.hero-logo {
+		margin-top: $spacing-sm;
 	}
-}
 
-%hero-shadow {
-	font-weight: $bold;
-	text-shadow: 0px 3px 1px rgba(0,0,0,0.2), 0px -1px 1px rgba(0,0,0,0.2);
-}
+	.hero-logo-img {
+		width: 60px;
+		margin-bottom: $spacing-sm;
+	}
 
-.hero-teaser {
-	@extend %hero-shadow;
-	font-size: em(20);
-	margin: 0 0 30px 0;
+	.hero-logo-text {
+		font-size: em(22);
+		margin: $spacing-sm 0;
+	}
+
+	.hero-line {
+		width: 60%;
+		margin: $spacing-sm auto;
+	}
+
+	.hero-date-location,
+	.hero-location {
+		font-size: em(16);
+		margin: $spacing-sm / 2.5 0;
+	}
+
+	.hero-location {
+		color: $red;
+		font-size: em(14);
+	}
 }
 
 .section-organizers {

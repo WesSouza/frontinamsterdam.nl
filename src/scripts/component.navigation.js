@@ -3,10 +3,9 @@ require( 'components' ).create( 'navigation', {
 		window.addEventListener( 'scroll', this.scrolled.bind( this ) );
 		window.addEventListener( 'resize', this.calculatePositions.bind( this ) );
 
-		this.$el.find( '.nav-open' ).on( 'click', this.menuToggle.bind( this ) )
 		this.$el.find( 'a' ).on( 'click', this.menuClose.bind( this ) )
 
-		this.calculatePositions();
+		setTimeout( this.calculatePositions.bind( this ), 100 );
 	},
 
 	calculatePositions: function ( ) {
@@ -15,8 +14,7 @@ require( 'components' ).create( 'navigation', {
 			this.navFixed = false;
 		}
 
-		this.small = Rye( '.nav-open', this.el ).css( 'display' ) != 'none';
-		this.navTop = this.el.getBoundingClientRect().top + document.body.scrollTop;
+		this.navTop = this.el.getBoundingClientRect().top + document.documentElement.scrollTop;
 		this.navHeight = this.el.offsetHeight;
 
 		this.scrolled();
@@ -24,26 +22,19 @@ require( 'components' ).create( 'navigation', {
 
 	scrolled: function ( ) {
 		if ( !this.small ) {
-			if ( document.body.scrollTop > this.navTop && !this.navFixed ) {
+			if ( document.documentElement.scrollTop > this.navTop && !this.navFixed ) {
 				this.$el.addClass( '-fixed' );
 				this.navFixed = true;
 			}
-			else if ( document.body.scrollTop <= this.navTop && this.navFixed ) {
+			else if ( document.documentElement.scrollTop <= this.navTop && this.navFixed ) {
 				this.$el.removeClass( '-fixed' );
 				this.navFixed = false;
 			}
 		}
 	},
 
-	menuToggle: function ( event ) {
-		event.preventDefault();
-		event.stopPropagation();
-		this.$el.find( '.nav-menu' ).toggleClass( '-opened' );
-	},
-
 	menuClose: function ( event ) {
-		if ( this.small ) {
-			this.$el.find( '.nav-menu' ).removeClass( '-opened' );
-		}
+		this.$el.removeClass( '-opened' );
+		Rye( '.nav-open' ).removeClass( '-opened' );
 	}
 } );

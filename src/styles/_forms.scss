@@ -1,3 +1,4 @@
+
 .form-register {
 	.form-input {
 		width: 200px;
@@ -41,6 +42,7 @@
 	color: $black;
 	font-size: em(16);
 	vertical-align: top;
+	-webkit-appearance: none;
 
 	&:hover, &:focus {
 		border-color: $dark-gray;
