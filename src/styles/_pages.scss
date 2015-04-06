@@ -17,6 +17,7 @@
 	font-size: em(16);
 	margin: $spacing-lg auto;
 	max-width: $break-medium + $spacing-lg;
+	text-align: center;
 
 	&::before {
 		content: '';
@@ -157,6 +158,48 @@
 	.hero-location {
 		color: $red;
 		font-size: em(14);
+	}
+}
+
+.section-location {
+	.location-photo {
+		background-size: cover;
+	}
+	.location-photo-1 {
+		background-image: url(../images/photos/tobacco-1.jpg);
+		height: 500px;
+	}
+	.location-photo-2 {
+		background-image: url(../images/photos/tobacco-2.jpg);
+		height: 250px;
+	}
+	.location-photo-3 {
+		background-image: url(../images/photos/tobacco-3.jpg);
+		height: 250px;
+	}
+	.location-map {
+		height: 500px;
+	}
+
+	@include respond-equal(sm) {
+		.location-photo-1,
+		.location-photo-2,
+		.location-photo-3,
+		.location-map {
+			height: 200px;
+		}
+	}
+
+	@include respond-equal(md) {
+		.location-photo-1,
+		.location-map {
+			height: 400px;
+		}
+
+		.location-photo-2,
+		.location-photo-3 {
+			height: 200px;
+		}
 	}
 }
 
