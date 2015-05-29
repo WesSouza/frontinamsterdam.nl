@@ -63,6 +63,20 @@
 	}
 }
 
+.section-topic-title {
+	font-size: em(18);
+	font-weight: $normal;
+	text-transform: uppercase;
+	color: $black;
+	text-align: center;
+	margin: 1.5*$spacing-lg auto $spacing-lg;
+
+	@include respond-equal(sm) {
+		font-size: em(16);
+		margin: 1.5*$spacing-sm auto $spacing-sm;
+	}
+}
+
 .section-text {
 	@include respond-larger(md) {
 		line-height: 1.7;
@@ -261,13 +275,56 @@
 
 .-tba .speaker-photo {
 	display: inline-block;
-	background: #cecece;
+	background: $placeholder-color;
 	text-align: center;
 	padding-top: 92px;
 
 	.lt-list & {
 		padding-top: 54px;
 		font-size: em(14);
+	}
+}
+
+.section-sponsors {
+	.sponsor {
+		text-align: center;
+	}
+
+	.sponsor-image {
+		display: inline-block;
+
+		img { max-width: 100%; }
+	}
+
+	.-tba .sponsor-image {
+		padding: 24px 0;
+		background: $placeholder-color;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.sponsors-gold-list .sponsor-image {
+		max-width: 450px;
+	}
+
+	.sponsors-silver-list .sponsor-image {
+		max-width: 280px;
+	}
+
+	.sponsors-brozne-list .sponsor-image {
+		max-width: 140px;
+		font-size: em(14);
+	}
+
+	.sponsors-silver-list {
+		.sponsor-image {
+			max-width: 280px;
+		}
+
+		.-tba .sponsor-image {
+			width: 280px;
+			padding: 24px 0;
+		}
 	}
 }
 
