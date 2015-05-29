@@ -8,7 +8,7 @@ rm -rf build || exit 0;
 
 npm install
 
-npm build
+gulp build
 cd build
 
 git init
