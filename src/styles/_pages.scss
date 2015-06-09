@@ -78,13 +78,24 @@
 }
 
 .section-text {
+	line-height: 1.5;
+
 	@include respond-larger(md) {
+		font-size: em(18);
 		line-height: 1.7;
+
+		ul {
+			margin: 0 20%;
+		}
 	}
 
 	@include respond-equal(lg) {
 		margin: 0 auto;
 		max-width: $break-medium - $spacing-sm;
+	}
+
+	ul {
+		text-align: left;
 	}
 }
 

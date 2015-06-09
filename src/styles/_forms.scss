@@ -77,7 +77,8 @@
 .btn-default,
 .btn-info,
 .btn-primary,
-.btn-danger {
+.btn-danger,
+.tito-tickets-button {
 	@extend a;
 	display: inline-block;
 	line-height: 21px;
@@ -118,7 +119,8 @@
 	}
 }
 
-.btn-primary {
+.btn-primary,
+.tito-tickets-button {
 	color: $white;
 	border-color: transparent;
 	background-color: $red;
