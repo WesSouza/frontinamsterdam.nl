@@ -5,6 +5,10 @@
 	vertical-align: top;
 }
 
+.grid-middle > * {
+	vertical-align: middle;
+}
+
 .grid-padded {
 	margin-left: - $spacing-sm / 2;
 	margin-right: - $spacing-sm / 2;
