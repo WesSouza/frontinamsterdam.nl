@@ -10,11 +10,10 @@ First run:
 
 During development (to generate files upon saving them):
 
-	npm start
+	npm run dev
 
 The website will be available at http://localhost:8080/.
 
 ## Deploy
 
-	npm run deploy
-
+Automatic via dploy.io.
