@@ -112,6 +112,7 @@
 	}
 
 	@include respond-equal(sm) {
+		background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('../images/amsterdam_768.jpg');
 		height: 400px;
 		padding-top: $nav-height-lg;
 	}
@@ -221,6 +222,15 @@
 	}
 
 	@include respond-equal(sm) {
+		.location-photo-1 {
+			background-image: url(../images/photos/tobacco-1_768.jpg);
+		}
+		.location-photo-2 {
+			background-image: url(../images/photos/tobacco-2_768.jpg);
+		}
+		.location-photo-3 {
+			background-image: url(../images/photos/tobacco-3_768.jpg);
+		}
 		.location-photo-1,
 		.location-photo-2,
 		.location-photo-3,
