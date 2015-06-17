@@ -99,12 +99,98 @@
 	}
 }
 
-.section-hero {
-	color: $white;
-	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('../images/amsterdam.jpg');
+.section-header {
+	color: $black;
+	background-image: url('../images/amsterdam_bw.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	@include respond-equal(sm) {
+		background-image: url('../images/amsterdam_bw_768.jpg');
+	}
+
+	.wrapper {
+		text-align: center;
+	}
+
+	.header-link {
+		color: $black;
+	}
+
+	.header-logo {
+		margin: $spacing-sm 0;
+	}
+
+	.header-logo-img {
+		width: 130px;
+		margin-bottom: $spacing-sm;
+	}
+
+	.header-logo-text {
+		margin: $spacing-sm 0;
+		font-size: em(50);
+		font-weight: $normal;
+		text-transform: uppercase;
+	}
+
+	.header-line {
+		width: 500px;
+		height: 1px;
+		margin: $spacing-lg auto;
+		border: 0;
+		background: linear-gradient(to right,  transparent 0%, $white 50%, transparent 100%);
+	}
+
+	.header-details {
+		display: block;
+	}
+
+	.header-ics:hover {
+		color: transparentize( $white, 0.4 );
+	}
+
+	.header-date-location,
+	.header-location {
+		font-size: em(22);
+		margin: $spacing-sm / 2 0;
+	}
+
+	.header-location {
+		font-size: em(16);
+	}
+
+	@include respond-equal(sm) {
+		.header-logo-img {
+			width: 60px;
+			margin-bottom: $spacing-sm / 3;
+		}
+
+		.header-logo-text {
+			font-size: em(22);
+			margin: $spacing-sm 0;
+		}
+
+		.header-line {
+			width: 60%;
+			margin: $spacing-sm auto;
+		}
+
+		.header-date-location,
+		.header-location {
+			font-size: em(16);
+			margin: $spacing-sm / 2.5 0;
+		}
+
+		.header-location {
+			font-size: em(14);
+		}
+	}
+}
+
+.section-hero {
+	color: $white;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('../images/amsterdam.jpg');
 
 	@include respond-larger(md) {
 		height: 100vh;
@@ -112,7 +198,7 @@
 	}
 
 	@include respond-equal(sm) {
-		background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('../images/amsterdam_768.jpg');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('../images/amsterdam_768.jpg');
 		height: 400px;
 		padding-top: $nav-height-lg;
 	}
@@ -120,84 +206,41 @@
 	.wrapper {
 		padding: 0;
 		height: 100%;
-		text-align: center;
-	}
-}
-
-.hero-logo {
-	margin: 0;
-}
-
-.hero-logo-img {
-	width: 160px;
-	margin-bottom: $spacing-lg * 1.1;
-}
-
-.hero-logo-text {
-	margin: $spacing-lg 0;
-	font-size: em(60);
-	font-weight: $normal;
-	text-transform: uppercase;
-	text-shadow: 0 2px 0 transparentize( $black, 0.8 );
-}
-
-.hero-line {
-	width: 500px;
-	height: 1px;
-	margin: $spacing-lg auto;
-	border: 0;
-	background: linear-gradient(to right,  transparent 0%, $white 50%, transparent 100%);
-}
-
-.hero-ics {
-	display: block;
-	color: $white;
-
-	&:hover {
-		color: transparentize( $white, 0.4 );
-	}
-}
-
-.hero-date-location,
-.hero-location {
-	font-size: em(22);
-	margin: $spacing-sm / 2 0;
-}
-
-.hero-location {
-	color: $red;
-	font-size: em(16);
-}
-
-@include respond-equal(sm) {
-	.hero-logo {
-		margin-top: $spacing-sm;
 	}
 
-	.hero-logo-img {
-		width: 60px;
-		margin-bottom: $spacing-sm;
+	.header-link {
+		color: $white;
 	}
 
-	.hero-logo-text {
-		font-size: em(22);
-		margin: $spacing-sm 0;
+	.header-logo-img {
+		width: 160px;
+		margin-bottom: $spacing-lg * 1.1;
 	}
 
-	.hero-line {
-		width: 60%;
-		margin: $spacing-sm auto;
+	.header-logo-text {
+		margin: $spacing-lg 0;
+		font-size: em(60);
+		text-shadow: 0 2px 0 transparentize( $black, 0.8 );
 	}
 
-	.hero-date-location,
-	.hero-location {
-		font-size: em(16);
-		margin: $spacing-sm / 2.5 0;
+	.header-details {
+		color: $white;
 	}
 
-	.hero-location {
+	.header-location {
 		color: $red;
-		font-size: em(14);
+	}
+
+	@include respond-larger(sm) {
+		.header-logo {
+			margin-top: 0;
+		}
+	}
+
+	@include respond-equal(sm) {
+		.header-logo-img {
+			margin-bottom: $spacing-sm;
+		}
 	}
 }
 

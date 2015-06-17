@@ -10,7 +10,7 @@ var src = {
   images: 'src/images/**',
   scripts: 'src/scripts/*.js',
   styles: 'src/styles/*.scss',
-  root: [ 'src/index.html', 'src/404.html', 'src/CNAME', 'src/Front-in-Amsterdam.ics' ]
+  root: [ 'src/index.html', 'src/media-kit.html', 'src/404.html', 'src/CNAME', 'src/Front-in-Amsterdam.ics' ]
 };
 
 gulp.task('root', function() {
