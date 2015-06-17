@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var livereload = require('gulp-livereload');
 var nodemon = require('gulp-nodemon');
 var plumber = require('gulp-plumber');
+var replace = require('gulp-replace');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 
@@ -18,6 +19,7 @@ var src = {
 gulp.task('root', function() {
 	gulp.src(src.root)
 		.pipe(plumber())
+		.pipe(replace('{assets-version}', Date.now()))
 		.pipe(gulp.dest('build/'))
 		.pipe(livereload());
 });
@@ -65,7 +67,7 @@ gulp.task('server', function() {
 			FIA_PORT: 8080
 		}
 	}).on('start', function () {
-		gutil.log(gutil.colors.red('Front in Amsterdam is ready on locahost:8080'));
+		gutil.log(gutil.colors.red('Front in Amsterdam is ready on http://locahost:8080'));
 	}).on('restart', function () {
 		// Hold on until server.js boots
 		setTimeout(function () {
