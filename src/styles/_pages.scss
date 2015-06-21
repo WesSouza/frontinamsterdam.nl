@@ -421,4 +421,9 @@
 	font-size: em(14);
 	color: $white;
 	background-color: $gray;
+
+	a {
+		color: $white;
+		text-decoration: underline;
+	}
 }
