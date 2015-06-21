@@ -132,6 +132,10 @@
 		font-size: em(50);
 		font-weight: $normal;
 		text-transform: uppercase;
+
+		&.-small {
+			font-size: em(30);
+		}
 	}
 
 	.header-line {
@@ -167,8 +171,12 @@
 		}
 
 		.header-logo-text {
-			font-size: em(22);
+			font-size: em(30);
 			margin: $spacing-sm 0;
+
+			&.-small {
+				font-size: em(22);
+			}
 		}
 
 		.header-line {
