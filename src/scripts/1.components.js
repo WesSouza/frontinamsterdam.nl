@@ -24,7 +24,6 @@
 
 define('components', function () {
 
-	var jQuery = window.jQuery
 	var _each  = Array.prototype.forEach
 	var _slice = Array.prototype.slice
 	var _extend = Rye.require('Util').extend;
