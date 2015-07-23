@@ -316,6 +316,23 @@
 		}
 	}
 
+	.speaker-name {
+		color: #444;
+	}
+
+	.speaker-company {
+		font-size: 1em;
+		color: $dark-gray;
+		margin-bottom: 0.25em;
+	}
+
+	.speaker-origin {
+		font-size: 0.9em;
+		color: $dark-gray;
+		font-weight: normal;
+		margin-top: 0;
+	}
+
 	.speaker-photo {
 		width: 200px;
 		height: 200px;
