@@ -435,6 +435,85 @@
 	}
 }
 
+.section-schedule {
+	.schedule-calendar {
+		overflow: hidden;
+	}
+
+	.schedule-time,
+	.schedule-event {
+		box-sizing: border-box;
+		float: left;
+		margin: 1.5em 0 0;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		@include respond-equal(sm) {
+			text-align: center;
+			float: none;
+			width: 100%;
+		}
+	}
+
+	.schedule-time {
+		width: 30%;
+		clear: left;
+		padding-right: 20px;
+		text-align: right;
+		font-size: 1.5em;
+		color: $dark-red;
+		margin-top: 1em;
+
+		@include respond-equal(sm) {
+			padding-right: 0;
+		}
+	}
+
+	.schedule-event {
+		width: 70%;
+		padding-left: 20px;
+
+		@include respond-equal(sm) {
+			padding-left: 0;
+			margin-top: 1em;
+
+			&:first-of-type {
+				margin-top: 1em;
+			}
+		}
+	}
+
+	.schedule-title {
+		margin: 0;
+		font-size: 1.5em;
+		font-weight: normal;
+	}
+
+	.schedule-presentation {
+		font-weight: bold;
+	}
+
+	.schedule-speaker {
+		margin: .75em 0;
+		font-weight: normal;
+
+		@include respond-equal(sm) {
+			text-align: center;
+		}
+	}
+
+	.schedule-description {
+		margin: 1.25em 0;
+		line-height: 1.4;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
 .section-footer {
 	font-size: em(14);
 	color: $white;
