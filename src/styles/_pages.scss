@@ -398,7 +398,7 @@
 	}
 
 	.sponsors-silver-list .sponsor-image {
-		max-width: 280px;
+		max-width: 240px;
 	}
 
 	.sponsors-brozne-list .sponsor-image {
@@ -406,16 +406,6 @@
 		font-size: em(14);
 	}
 
-	.sponsors-silver-list {
-		.sponsor-image {
-			max-width: 280px;
-		}
-
-		.-tba .sponsor-image {
-			width: 280px;
-			padding: 24px 0;
-		}
-	}
 }
 
 .section-sponsorship {
