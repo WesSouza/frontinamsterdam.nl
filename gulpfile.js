@@ -67,7 +67,7 @@ gulp.task('server', function() {
 			FIA_PORT: 8080
 		}
 	}).on('start', function () {
-		gutil.log(gutil.colors.red('Front in Amsterdam is ready on http://locahost:8080'));
+		gutil.log(gutil.colors.red('Front in Amsterdam is ready on http://localhost:8080'));
 	}).on('restart', function () {
 		// Hold on until server.js boots
 		setTimeout(function () {
