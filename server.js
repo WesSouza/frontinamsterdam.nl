@@ -37,6 +37,10 @@ app.use(serveStatic(__dirname +'/build', { setHeaders: setHeaders }));
 app.get('/tickets', redirect('https://ti.to/front-in-amsterdam/2015'))
 app.get('/register', redirect('https://ti.to/front-in-amsterdam/2015'))
 
+app.get('/loaderio-b45c6f70577e3c08fc8f7a3cbedac55e', function (req, res) {
+	res.end('loaderio-b45c6f70577e3c08fc8f7a3cbedac55e');
+});
+
 app.get('*', fourOhFour())
 
 app.listen(port);
