@@ -211,6 +211,20 @@
 		padding-top: $nav-height-lg;
 	}
 
+	@include respond-short() {
+		.header-logo-text {
+			font-size: em(40);
+			margin: $spacing-sm 0;
+		}
+		.header-logo-img {
+			width: 120px;
+			margin-bottom: $spacing-sm;
+		}
+		.header-line {
+			margin: $spacing-sm auto;
+		}
+	}
+
 	.wrapper {
 		padding: 0;
 		height: 100%;

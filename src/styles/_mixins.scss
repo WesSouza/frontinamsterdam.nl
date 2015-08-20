@@ -39,6 +39,10 @@
 	}
 }
 
+@mixin respond-short() {
+	@media only screen and (max-height: 540px) and (min-width: $break-medium) { @content; }
+}
+
 @mixin input-placeholder {
 	&::-webkit-input-placeholder { @content; }
 	&::-moz-placeholder { @content; }
