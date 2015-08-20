@@ -318,6 +318,7 @@
 
 	.speaker-name {
 		color: #444;
+		font-size: em(24);
 	}
 
 	.speaker-company {
@@ -347,6 +348,10 @@
 	.speaker-bio {
 		margin-top: 0;
 		margin-bottom: 0;
+		line-height: 1.4;
+		text-align: left;
+		padding: 0.5em 1em;
+		font-size: em(15);
 	}
 
 	@include respond-equal(lg) {
