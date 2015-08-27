@@ -19,12 +19,11 @@
 			"title": "Show vs. tell in UX design",
 			"subtitle": "Zoe Gillenwater – Booking.com",
 			"speakerSprite": "zoe",
-			"image": "speakers/zoe_120.jpg",
 			"description": "We’ve all heard these “laws” of design: “People don’t read on the web.” “If you have to explain how to use your product, you’ve failed.” “A picture is worth a thousand words.” It seems like our job as designers is to make things as intuitive as possible, using as few words as possible so that the meaning is self-evident through our visual design. But does this always produce the best user experience? Is showing always better than telling? We’ll look at several examples of design from the real world, the web, and apps that use showing, telling, or both as a method for producing the best UX. Rather than just assuming one is always better than the other, learn how to choose the right approach for your particular design problem and users.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1qciKSX1wDs0_H8kU3EANiooSdA-PBHQ2ItpJRUERGVI/viewform"
 		},
 		{
 			"id": "jouni",
@@ -33,12 +32,11 @@
 			"title": "Will your JavaScript app still work in 2030?",
 			"subtitle": "Jouni Kaplas – Futurice",
 			"speakerSprite": "jouni",
-			"image": "speakers/jouni_120.jpg",
 			"description": "How will JavaScript be in 15 years? Will your code still work? Ours has to, so we are doing our very best to ensure that. Join me aboard my very opinionated time machine, and you'll learn how to avoid sprinkling magical unicorn powder in the wrong places, how to select the right gods, and how to still sleep without nightmares. In other words, you'll hear how we are trying to write a huge business-critical web app for the future.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1R6fznsTmD2EDEDu6JdGmWb1a0L2Fu5aE84SZPTMjIqc/viewform"
 		},
 		{
 			"time": "11:10",
@@ -52,12 +50,11 @@
 			"title": "High performance images",
 			"subtitle": "Tobias Baldauf – Akamai",
 			"speakerSprite": "tobias",
-			"image": "speakers/tobias_120.jpg",
 			"description": "Today's average website is 62% pure image data. We use images to convey emotion, elicit an action or simply to amuse our peers. They show holiday photos, pie charts or animated cats.\n\nTo the unitiated, nothing much has changed since the JPEG file format was standardized in 1992 and GIFs became capable of showing multiple frames of cat mischief. But under the hood, the complex realm of raster and vector images is ever changing: new encoders use cues from the fields of computer vision and machine learning to optimize image data, old formats learn new tricks and completely new image formats try to take the stage.\n\nTo deliver a great user experience, we need to learn to create high performance images and implement an image management strategy: leveraging the ideal image file formats and use advanced techniques to handle the challenges of responsive designs and situational performance. High performance images increase the perceived performance of your website, improve the user experience and drive conversions.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1H40dA3uuXKva0j9W8QDpHdYw1SVqTX78GiiU6oSEjFs/viewform"
 		},
 		{
 			"time": "12:20",
@@ -71,12 +68,11 @@
 			"title": "Type to the 7th dimension",
 			"subtitle": "Luc(as) de Groot – LucasFonts",
 			"speakerSprite": "lucas",
-			"image": "speakers/lucas_120.jpg",
 			"description": "Today, the complexities of type design, type rendering, type readability on devices and type history have all entered the 7th dimension. We’ll see 70 minutes of information and around 700 slides compressed in an amusing 42 minutes.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1aRozDb8EUmx6YsDa4g36kxA60qVmJy-pD2UURp3G4w4/viewform"
 		},
 		{
 			"id": "jorn",
@@ -85,12 +81,11 @@
 			"title": "Effective jQuery",
 			"subtitle": "Jörn Zaefferer – jQuery UI/QUnit",
 			"speakerSprite": "jorn",
-			"image": "speakers/jorn_120.jpg",
 			"description": "Most people have a driver's license, but very few are race car drivers. Every web developer knows jQuery, but very few make use of all its potential.\n\nThis talk will cover some basics from a new perspective, to make more effective use of the finely tuned library we all seem to know so well. Topics include: how to use event delegation for just in time initialization; how to structure your markup, CSS and JS for them to work well together while promoting maintainability of all three; how to avoid performance bottlenecks when using jQuery; how to use CSS3 transitions with fallbacks; and finally, how to reuse existing widgets with unique look and feel.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1SmIjRpj4XIXOQcoP-FPcEoNGbNin147o5yTC8G9BH0Y/viewform"
 		},
 		{
 			"id": "jaco",
@@ -99,12 +94,11 @@
 			"title": "Ten easy steps to become a successful pirate",
 			"subtitle": "Jaco Koster – FrontMen",
 			"speakerSprite": "jaco",
-			"image": "speakers/jaco_120.jpg",
 			"description": "Building (web) applications for customers of a large enterprise organisation is not easy. Large companies expect you to deliver maintainable and reliable within the time given, while conforming to all the rules. This also means working with (although we hate to admit it) waterfall-projects where teams struggle to be more agile.\n\nWith a few simple steps it is now possible to change your team in a fast and agile team of pirates, who live by their own rules. When you have a team of pirates, it is possible to meet all the standards and still have time to enjoy the view.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1ZP3rfbOPc8ieghiPv70jbF0X3KG9py67lqcOSrE9PFs/viewform"
 		},
 		{
 			"id": "ilya",
@@ -113,12 +107,11 @@
 			"title": "50 shades of Flux",
 			"subtitle": "Ilya Pukhalski – EPAM",
 			"speakerSprite": "ilya",
-			"image": "speakers/ilya_120.jpg",
 			"description": "There are now more Flux implementations than MV* frameworks have ever existed.\n\nBut what is Flux? Could it be used without React.js? Why is it better than MV* approaches? What are its drawbacks and pitfalls? Should I move on together with Flux or just stay and wait with my lovely MV*-like architecture?",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1VtzQ3JZhrBASbKIP1Gd_R_5CxYmEEG2gyxnMG5MHG-4/viewform"
 		},
 		{
 			"id": "ramon",
@@ -127,12 +120,11 @@
 			"title": "Baby steps and why it's more important than your code skills",
 			"subtitle": "Ramon Victor – Booking.com",
 			"speakerSprite": "ramon",
-			"image": "speakers/ramon_120.jpg",
 			"description": "In this talk I'd like to explain why many startups fail when trying to build a product with fancy code and a \"scalable\" solution before learning what business/design needs they're trying to solve. Actually, it's not only for startups, it's also for you, as designer or developer. Why we should understand our ideas is more likely to fail than succeed? This is for sure much more important than learning Material Design, ReactJS or any other buzzword of our field.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1yEqvbx9Js7ZbX-F8nobMC4tCzVmlTschrWILnO3HFe8/viewform"
 		},
 		{
 			"id": "koen",
@@ -141,12 +133,11 @@
 			"title": "Building &lt;x-nes&gt;",
 			"subtitle": "Koen Kivits – Coosto",
 			"speakerSprite": "koen",
-			"image": "speakers/koen_120.jpg",
 			"description": "30 years ago the Nintendo Entertainment System could be found in every home, now it can be embedded into every web page using the awesome power of web components. In this talk I will share what I learned from turning an old video game console into a web component.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1WXm9Tq6J5CGsUFx_M12gX4c9ywsbhNTCR-9Bu9c-Lg4/viewform"
 		},
 		{
 			"time": "16:00",
@@ -160,12 +151,11 @@
 			"title": "HTML GL - Render HTML &amp; CSS via WebGL for 60 fps and a bit of effects",
 			"subtitle": "Denis Radin – Ziggo",
 			"speakerSprite": "denis",
-			"image": "speakers/denis_120.jpg",
 			"description": "HTML GL solves \"the slow DOM problem\" by creating WebGL representations of DOM elements and hiding actual DOM after. This speeds up HTML/CSS animations and transformations by using 3D hardware acceleration and allows to apply OpenGL effects as modern 3D games have. Also will shed some light on approaches being developed in UPC / Ziggo for getting highest performance possible on mobile and TV devices.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1JCKqB0HQEkC5VmJojZeVbVdBXm39fkEKs66fuWjd_mQ/viewform"
 		},
 		{
 			"id": "matthew",
@@ -174,12 +164,11 @@
 			"title": "Patches welcome",
 			"subtitle": "Matt MacPherson – Mozilla",
 			"speakerSprite": "matthew",
-			"image": "speakers/matthew_120.jpg",
 			"description": "A discussion on building a community around open source software, and how you can encourage your next front-end project to be contributor-friendly.",
 			"talk": true,
 			"tweet": true,
 			"questions": true,
-			"feedback": true
+			"feedback": "https://docs.google.com/forms/d/1zRCyCMbunC-Fgxh6TL7_bAm7GPb6L6MR-4V4l1V1Zkc/viewform"
 		},
 		{
 			"time": "18:00",

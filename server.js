@@ -33,7 +33,13 @@ function setHeaders (res, path) {
 
 app.get('/', function (req, res, next) {
 	if (req.query.nr === undefined) {
-		res.redirect(302, '/conference.html');
+		var now = Date.now();
+		if (now >= 1440743400000 && now <= 1440784800000) {
+			res.redirect(302, '/conference.html');
+		}
+		else {
+			next();
+		}
 	}
 	else {
 		next();

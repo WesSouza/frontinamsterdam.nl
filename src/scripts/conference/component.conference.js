@@ -1,12 +1,12 @@
 require('components').create('conference', {
-	forceTime: "10:00",
+	//forceTime: location.hash ? location.hash.replace('#','') : undefined,
 
 	initialize: function () {
 		Rye('.nav-item-now').on('click', this.tabToggle.bind(this, 'now'));
 		Rye('.nav-item-schedule').on('click', this.tabToggle.bind(this, 'schedule'));
 
 		this.scheduleFetch();
-		setInterval(this.versionFetch.bind(this), 60000);
+		setInterval(this.versionFetch.bind(this), 120000);
 	},
 
 	showTime: function () {
@@ -66,10 +66,11 @@ require('components').create('conference', {
 		Rye(event.currentTarget).toggleClass('-opened');
 	},
 
-	scheduleItemTemplate: function (item) {
+	scheduleItemTemplate: function (item, options) {
+		options = options || {};
 		return '<article class="list-item schedule-item '+ (item.description ? 'js-schedule-item' : '' ) +'">' +
 				'<div class="schedule-header">' +
-					(item.speakerSprite ? '<span class="schedule-image speaker-'+ item.speakerSprite +'"></span>' : '' )+
+					(!options.noPhoto ? '<span class="schedule-image speaker-'+ item.speakerSprite +'"></span>' : '' )+
 					'<div class="schedule-details">' +
 						'<div class="schedule-time">'+ item.time + (item.location ? ' at '+ item.location.toUpperCase() : '') +'</div>' +
 						'<div class="schedule-title">'+ item.title +'</div>' +
@@ -135,10 +136,14 @@ require('components').create('conference', {
 
 	nowRender: function () {
 		if (this.schedulePrevious && this.schedulePrevious.talk) {
-			Rye('.js-previous').html(this.scheduleItemTemplate(this.schedulePrevious));
+			Rye('.js-previous').html(this.scheduleItemTemplate(this.schedulePrevious, {noPhoto: true}));
 			this.scheduleAddEventListeners('.js-previous');
 			Rye('.js-previous-title, .js-previous').removeClass('-hidden');
+			
 			Rye('.js-previous-feedback').toggleClass('-hidden', !this.schedulePrevious.feedback);
+			if (this.schedulePrevious.feedback) {
+				Rye('.js-now-action-feedback').attr('href', this.schedulePrevious.feedback);
+			}
 		}
 		else {
 			Rye('.js-previous-title, .js-previous, .js-previous-feedback').addClass('-hidden');
@@ -181,7 +186,7 @@ require('components').create('conference', {
 
 
 	versionFetch: function () {
-		Rye.request('version.txt', function (err, version) {
+		Rye.request('version.txt?r='+ Math.random(), function (err, version) {
 			if (!err) {
 				if (!this.versionCurrent) {
 					this.versionCurrent = version;
