@@ -8,12 +8,16 @@ var plumber = require('gulp-plumber');
 var replace = require('gulp-replace');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
+var minifycss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
 
 var src = {
 	images: 'src/images/**',
-	scripts: 'src/scripts/*.js',
-	styles: 'src/styles/*.scss',
-	root: [ 'src/index.html', 'src/media-kit.html', 'src/404.html', 'src/CNAME', 'src/Front-in-Amsterdam.ics' ]
+	scripts: 'src/scripts/main/*.js',
+	styles: 'src/styles/main/*.scss',
+	scriptsConference: ['src/scripts/main/0.ryejs.js', 'src/scripts/main/1.components.js', 'src/scripts/conference/*.js'],
+	stylesConference: 'src/styles/conference/*.css',
+	root: ['src/index.html', 'src/media-kit.html', 'src/conference.html', 'src/404.html', 'src/CNAME', 'src/Front-in-Amsterdam.ics']
 };
 
 gulp.task('root', function() {
@@ -40,11 +44,31 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-	gulp.src('src/styles/main.scss')
+	gulp.src('src/styles/main/main.scss')
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(autoprefixer( { browsers: [ '> 1%' ] } ))
 		.pipe(combinemq())
+		.pipe(gulp.dest('build/styles'))
+		.pipe(livereload());
+});
+
+gulp.task('scriptsConference', function() {
+	gulp.src(src.scriptsConference)
+		.pipe(plumber())
+		.pipe(concat('conference.js'))
+		.pipe(uglify({ preserveComments: 'some' }))
+		.pipe(gulp.dest('build/scripts'))
+		.pipe(livereload());
+});
+
+gulp.task('stylesConference', function() {
+	gulp.src(src.stylesConference)
+		.pipe(plumber())
+		.pipe(concat('conference.css'))
+		.pipe(autoprefixer( { browsers: [ '> 1%' ] } ))
+		.pipe(combinemq())
+		.pipe(minifycss())
 		.pipe(gulp.dest('build/styles'))
 		.pipe(livereload());
 });
@@ -54,6 +78,8 @@ gulp.task('watch', function() {
 	gulp.watch(src.images, ['images']);
 	gulp.watch(src.styles, ['styles']);
 	gulp.watch(src.scripts, ['scripts']);
+	gulp.watch(src.stylesConference, ['stylesConference']);
+	gulp.watch(src.scriptsConference, ['scriptsConference']);
 });
 
 gulp.task('server', function() {
@@ -77,5 +103,5 @@ gulp.task('server', function() {
 	});
 });
 
-gulp.task('default', ['server', 'watch', 'root', 'images', 'scripts', 'styles']);
-gulp.task('build', ['root', 'images', 'scripts', 'styles']);
+gulp.task('default', ['server', 'watch', 'root', 'images', 'scripts', 'styles', 'scriptsConference', 'stylesConference']);
+gulp.task('build', ['root', 'images', 'scripts', 'styles', 'scriptsConference', 'stylesConference']);
