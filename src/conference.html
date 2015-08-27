@@ -24,92 +24,57 @@
 
 	<nav class="nav">
 		<h1 class="logo">Front in <strong>Amsterdam</strong></h1>
-		<ul class="nav-menu">
+		<ul class="nav-menu js-nav-menu -hidden">
 			<li class="nav-item nav-item-now -active">Now</li>
 			<li class="nav-item nav-item-schedule">Schedule</li>
 		</ul>
 	</nav>
 
-	<section id="now" class="card list">
-		<article class="list-item list-item-1-1 schedule-item">
-			<div class="schedule-header">
-				<img src="http://frontinamsterdam.nl/images/speakers/denis.jpg" alt="" class="schedule-image">
-				<div class="schedule-details">
-					<div class="schedule-time">16:20 at THEATRE</div>
-					<div class="schedule-title">HTML GL - Render HTML & CSS via WebGL for 60 fps and a bit of effects</div>
-					<div class="schedule-subtitle">Denis Radin – Ziggo</div>
-				</div>
-				<div class="schedule-action schedule-action-open">+</div>
-			</div>
-			<div class="schedule-description">
-				HTML GL solves "the slow DOM problem" by creating WebGL representations of DOM elements and hiding actual DOM after. This speeds up HTML/CSS animations and transformations by using 3D hardware acceleration and allows to apply OpenGL effects as modern 3D games have. Also will shed some light on approaches being developed in UPC / Ziggo for getting highest performance possible on mobile and TV devices.
-			</div>
+	<section id="now" class="card list -hidden">
+		<div class="js-now -hidden"></div>
+		<article class="list-item now-actions js-now-actions">
+			<a href="https://twitter.com/intent/tweet?text=%23FrontinAMS" target="_blank" class="now-action btn js-now-action-tweet">Tweet about this!</a>
+			<a href="https://twitter.com/intent/tweet?screen_name=FrontinAMS&amp;text=%23FrontinAMS" target="_blank" class="now-action btn js-now-action-questions">Send questions</a>
 		</article>
-		<article class="list-item list-item-1-1 now-actions">
-			<button class="now-action btn">Send questions</button>
-			<button class="now-action btn">Give feedback</button>
-		</article>
-		<div class="list-item list-group">Up next</div>
-		<article class="list-item list-item-1-1 schedule-item">
-			<div class="schedule-header">
-				<img src="http://frontinamsterdam.nl/images/speakers/matthew.jpg" alt="" class="schedule-image">
-				<div class="schedule-details">
-					<div class="schedule-time">17:10 at THEATRE</div>
-					<div class="schedule-title">Patches welcome</div>
-					<div class="schedule-subtitle">Matt MacPherson – Mozilla</div>
-				</div>
-				<div class="schedule-action schedule-action-open">+</div>
-			</div>
-			<div class="schedule-description">
-				A discussion on building a community around open source software, and how you can encourage your next front-end project to be contributor-friendly.
-			</div>
-		</article>
+		<div class="list-item list-group js-up-next-title -hidden">Up next</div>
+		<div class="js-up-next -hidden"></div>
+		<div class="text-small list-item list-group js-previous-title -hidden">Previous talk</div>
+		<div class="text-small js-previous -hidden"></div>
+		<div class="text-small text-center list-item js-previous-feedback -hidden">
+			<button class="now-action btn btn-small js-now-action-feedback">Give feedback</button>
+		</div>
+		<div class="list-item list-group"></div>
+		<div class="text-small list-item list-item-disabled">
+			This page updates automatically.<br>
+			<br>
+			Missing our location and more event details?<br>
+			<a href="./?nr">Visit the full website.</a>
+		</div>
 	</section>
 
-	<section id="schedule" class="card list" hidden>
-		<article class="list-item list-item-1-1 schedule-item">
-			<img src="http://placehold.it/80x80" alt="" class="schedule-image">
-			<div class="schedule-details">
-				<div class="schedule-time">8:00</div>
-				<div class="schedule-title">Thing</div>
-				<div class="schedule-subtitle">Theater</div>
-			</div>
-			<div class="schedule-action">+</div>
-		</article>
-		<article class="list-item list-item-1-1 schedule-item">
-			<img src="http://placehold.it/80x80" alt="" class="schedule-image">
-			<div class="schedule-details">
-				<div class="schedule-time">8:00</div>
-				<div class="schedule-title">Thing</div>
-				<div class="schedule-subtitle">Theater</div>
-			</div>
-			<div class="schedule-action">+</div>
-		</article>
-		<article class="list-item list-item-1-1 schedule-item">
-			<img src="http://placehold.it/80x80" alt="" class="schedule-image">
-			<div class="schedule-details">
-				<div class="schedule-time">8:00</div>
-				<div class="schedule-title">Thing</div>
-				<div class="schedule-subtitle">Theater</div>
-			</div>
-			<div class="schedule-action">+</div>
-		</article>
+	<section id="schedule" class="card list -hidden">
 	</section>
 
-	<section id="detail" class="card" hidden>
-		<article class="schedule-detail">
-			<div class="schedule-item">
-				<img src="http://placehold.it/80x80" alt="" class="schedule-image">
-				<div class="schedule-details">
-					<div class="schedule-time">8:00</div>
-					<div class="schedule-title">Thing</div>
-					<div class="schedule-subtitle">Theater</div>
-				</div>
-			</div>
-			<div class="schedule-description">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio non soluta deserunt ex quam dolorum numquam dignissimos error quos eius, vero unde tenetur quae temporibus voluptatem eum, ea. Sunt, eligendi?
-			</div>
-		</article>
+	<section id="soon" class="card card-full -hidden">
+		<div class="card-full-content">
+			The conference starts at 8:30.
+		</div>
+	</section>
+
+	<section id="too-late" class="card card-full -hidden">
+		<div class="card-full-content">
+			Front in Amsterdam is over.<br>
+			<br>
+			We hope you liked it :D
+		</div>
+	</section>
+
+	<section id="error" class="card card-full -hidden">
+		<div class="card-full-content">
+			There was an error :(<br>
+			<br>
+			<a href="./" class="btn" onclick="location.reload();return false">Try again</a><br>
+		</div>
 	</section>
 
 	<script src="/scripts/conference.js?v={assets-version}" async></script>

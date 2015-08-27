@@ -17,7 +17,16 @@ var src = {
 	styles: 'src/styles/main/*.scss',
 	scriptsConference: ['src/scripts/main/0.ryejs.js', 'src/scripts/main/1.components.js', 'src/scripts/conference/*.js'],
 	stylesConference: 'src/styles/conference/*.css',
-	root: ['src/index.html', 'src/media-kit.html', 'src/conference.html', 'src/404.html', 'src/CNAME', 'src/Front-in-Amsterdam.ics']
+	root: [
+		'src/404.html',
+		'src/CNAME',
+		'src/conference.html',
+		'src/Front-in-Amsterdam.ics',
+		'src/index.html',
+		'src/media-kit.html',
+		'src/schedule.json',
+		'src/version.txt'
+	]
 };
 
 gulp.task('root', function() {

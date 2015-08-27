@@ -1,6 +1,13 @@
 /* Global */
+html, body {
+	min-height: 100vh;
+}
+
 body {
-	margin: 0;
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	margin: 0 auto;
 	background-color: #eee;
 	font: 1em 'Roboto', sans-serif;
 }
@@ -9,16 +16,29 @@ body, input, button, select, textarea {
 	font: 1em 'Roboto', sans-serif;
 }
 
+.-hidden {
+	display: none !important;
+}
+
+.text-small {
+	font-size: 0.9em;
+}
+
+.text-center {
+	text-align: center;
+}
+
 /* Nav */
 .logo {
 	margin: 0;
-	padding: 10px 10px 0 10px;
+	padding: 10px;
 	text-align: center;
 	font-weight: normal;
 	text-transform: uppercase;
 }
 
 .nav {
+	flex: 0 0 auto;
 	color: #fff;
 	background-color: #c31616;
 }
@@ -26,25 +46,37 @@ body, input, button, select, textarea {
 .nav-menu {
 	display: flex;
 	list-style-type: none;
-	margin: 10px 10px 0 10px;
+	margin: 0 15px;
 	padding: 0;
 }
 
 .nav-item {
 	flex: 1 0 0;
 	padding: 8px;
-	border-radius: 4px 4px 0 0;
 	text-align: center;
+	cursor: pointer;
 }
 
 .nav-item.-active {
-	background-color: #ea3b3b;
+	color: #000;
+	background-color: #fff;
 	font-weight: bold;
 }
 
 /* Cards */
 .card {
 	background-color: #fff;
+}
+
+.card-full {
+	display: flex;
+	flex: 1 0 auto;
+	text-align: center;
+	align-items: center;
+}
+
+.card-full-content {
+	flex: 1 0 auto;
 }
 
 /* Lists */
@@ -65,6 +97,15 @@ body, input, button, select, textarea {
 	text-transform: uppercase;
 }
 
+.list-item-disabled {
+	background-color: #eee;
+	color: #999;
+}
+
+.list-item-disabled a {
+	color: #999;
+}
+
 /* Button */
 .btn {
 	display: inline-block;
@@ -76,6 +117,10 @@ body, input, button, select, textarea {
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.btn-small {
+	padding: 6px 15px;
 }
 
 /* Now */
@@ -94,6 +139,7 @@ body, input, button, select, textarea {
 
 /* Schedule */
 .schedule-item {
+	cursor: pointer;
 }
 
 .schedule-header {
@@ -116,15 +162,16 @@ body, input, button, select, textarea {
 .schedule-time {
 	font-size: 0.8em;
 	color: #999;
-	padding-bottom: 4px;
+	padding-bottom: 3px;
 }
 
 .schedule-title {
-	padding-bottom: 4px;
 	font-weight: bold;
 }
 
 .schedule-subtitle {
+	padding-top: 3px;
+	font-size: 0.8em;
 }
 
 .schedule-action {
@@ -143,10 +190,70 @@ body, input, button, select, textarea {
 }
 
 .schedule-description {
-	padding-top: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
 	display: none;
+	line-height: 1.5;
 }
 
 .schedule-item.-opened .schedule-description {
 	display: block;
+}
+
+
+/* Speaker Sprite */
+.speaker-bryan,
+.speaker-denis,
+.speaker-ilya,
+.speaker-jaco,
+.speaker-jorn, 
+.speaker-jouni,
+.speaker-koen,
+.speaker-lucas,
+.speaker-matthew,
+.speaker-ramon, 
+.speaker-tobias,
+.speaker-zoe
+{
+	background: url('../images/speakers/_sprite_120.jpg') no-repeat;
+	background-size: 192px 256px;
+	width: 60px;
+	height: 60px;
+}
+ 
+.speaker-bryan {
+	background-position: -0px -0px;
+}
+.speaker-denis {
+	background-position: -64px -0px;
+}
+.speaker-ilya {
+	background-position: -128px -0px;
+}
+.speaker-jaco {
+	background-position: -0px -64px;
+}
+.speaker-jorn {
+	background-position: -64px -64px;
+}
+.speaker-jouni {
+	background-position: -128px -64px;
+}
+.speaker-koen {
+	background-position: -0px -128px;
+}
+.speaker-lucas {
+	background-position: -64px -128px;
+}
+.speaker-matthew {
+	background-position: -128px -128px;
+}
+.speaker-ramon {
+	background-position: -0px -192px;
+}
+.speaker-tobias {
+	background-position: -64px -192px;
+}
+.speaker-zoe {
+	background-position: -128px -192px;
 }

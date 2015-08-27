@@ -31,9 +31,21 @@ function setHeaders (res, path) {
 	}
 }
 
+app.get('/', function (req, res, next) {
+	if (req.query.nr === undefined) {
+		res.redirect(302, '/conference.html');
+	}
+	else {
+		next();
+	}
+})
+
 app.use(compress());
 app.use(serveStatic(__dirname +'/build', { setHeaders: setHeaders }));
 
+app.get('/c', redirect('/conference.html'))
+app.get('/conf', redirect('/conference.html'))
+app.get('/conference', redirect('/conference.html'))
 app.get('/tickets', redirect('https://ti.to/front-in-amsterdam/2015'))
 app.get('/register', redirect('https://ti.to/front-in-amsterdam/2015'))
 
