@@ -102,7 +102,7 @@
 		},
 		{
 			"id": "ilya",
-			"time": "15:15",
+			"time": "15:00",
 			"location": "Theatre",
 			"title": "50 shades of Flux",
 			"subtitle": "Ilya Pukhalski – EPAM",
@@ -115,7 +115,7 @@
 		},
 		{
 			"id": "ramon",
-			"time": "15:30",
+			"time": "15:15",
 			"location": "Theatre",
 			"title": "Baby steps and why it's more important than your code skills",
 			"subtitle": "Ramon Victor – Booking.com",
@@ -128,7 +128,7 @@
 		},
 		{
 			"id": "koen",
-			"time": "15:45",
+			"time": "15:30",
 			"location": "Theatre",
 			"title": "Building &lt;x-nes&gt;",
 			"subtitle": "Koen Kivits – Coosto",
