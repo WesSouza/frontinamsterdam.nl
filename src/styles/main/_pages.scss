@@ -160,6 +160,21 @@
 		margin: $spacing-sm / 2 0;
 	}
 
+
+		.thankyou {
+			background-color: #C31616;
+			padding: 15px 50px;
+			border-radius: 3px;
+			text-decoration: none;
+			font-size: 20px;
+			transition: background 0.2s;
+		}
+
+			.thankyou:hover {
+				background: #ea3b3b;
+				color: #FFF;
+			}
+
 	.header-location {
 		font-size: em(16);
 	}
