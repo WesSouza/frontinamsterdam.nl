@@ -1,9 +1,11 @@
 @import "variables";
 @import "mixins";
 @import "globals";
-@import "grid";
 @import "forms";
 @import "content";
 @import "nav";
 
 @import "pages";
+
+/* Must be last so .visible-* and .hidden-* work properly */
+@import "grid";
