@@ -8,7 +8,6 @@ var plumber = require('gulp-plumber');
 var replace = require('gulp-replace');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
-var minifycss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 
 var src = {
@@ -57,7 +56,7 @@ gulp.task('styles', function() {
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(autoprefixer( { browsers: [ '> 1%' ] } ))
-		.pipe(combinemq())
+		//.pipe(combinemq())
 		.pipe(gulp.dest('build/styles'))
 		.pipe(livereload());
 });
@@ -66,7 +65,7 @@ gulp.task('scriptsConference', function() {
 	gulp.src(src.scriptsConference)
 		.pipe(plumber())
 		.pipe(concat('conference.js'))
-		.pipe(uglify({ preserveComments: 'some' }))
+		.pipe(uglify())
 		.pipe(gulp.dest('build/scripts'))
 		.pipe(livereload());
 });
@@ -76,8 +75,7 @@ gulp.task('stylesConference', function() {
 		.pipe(plumber())
 		.pipe(concat('conference.css'))
 		.pipe(autoprefixer( { browsers: [ '> 1%' ] } ))
-		.pipe(combinemq())
-		.pipe(minifycss())
+		//.pipe(combinemq())
 		.pipe(gulp.dest('build/styles'))
 		.pipe(livereload());
 });

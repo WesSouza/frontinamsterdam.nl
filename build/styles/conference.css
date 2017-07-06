@@ -1,0 +1,283 @@
+/* Global */
+html, body {
+	min-height: 100vh;
+}
+
+body {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	max-width: 500px;
+	margin: 0 auto;
+	background-color: #eee;
+	font: 1em 'Roboto', sans-serif;
+}
+
+body, input, button, select, textarea {
+	font: 1em 'Roboto', sans-serif;
+}
+
+.-hidden {
+	display: none !important;
+}
+
+.text-small {
+	font-size: 0.9em;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* Nav */
+.logo {
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.nav {
+	-webkit-box-flex: 0;
+	        flex: 0 0 auto;
+	color: #fff;
+	background-color: #c31616;
+}
+
+.nav-menu {
+	display: -webkit-box;
+	display: flex;
+	list-style-type: none;
+	margin: 0 15px;
+	padding: 0;
+}
+
+.nav-item {
+	-webkit-box-flex: 1;
+	        flex: 1 0 0;
+	padding: 8px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.nav-item.-active {
+	color: #000;
+	background-color: #fff;
+	font-weight: bold;
+}
+
+/* Cards */
+.card {
+	background-color: #fff;
+}
+
+.card-full {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-flex: 1;
+	        flex: 1 0 auto;
+	text-align: center;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+.card-full-content {
+	-webkit-box-flex: 1;
+	        flex: 1 0 auto;
+}
+
+/* Lists */
+.list {
+
+}
+
+.list-item {
+	padding: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+.list-group {
+	background-color: #eee;
+	padding-bottom: 5px;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.list-item-disabled {
+	background-color: #eee;
+	color: #999;
+}
+
+.list-item-disabled a {
+	color: #999;
+}
+
+/* Button */
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: #ea3b3b;
+	border: 0;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.btn-small {
+	padding: 6px 15px;
+}
+
+/* Now */
+.now-actions {
+	display: -webkit-box;
+	display: flex;
+}
+
+.now-action {
+	-webkit-box-flex: 1;
+	        flex: 1 0 0;
+	margin-right: 15px;
+}
+
+.now-action:last-child {
+	margin-right: 0;
+}
+
+/* Schedule */
+.schedule-item {
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+.schedule-header {
+	display: -webkit-box;
+	display: flex;
+}
+
+.schedule-image {
+	-webkit-box-flex: 0;
+	        flex: 0 0 60px;
+	width: 60px;
+	height: 60px;
+	margin-right: 15px;
+	border-radius: 1000px;
+	background: #eee url('../images/fia-shield-120.png') no-repeat;
+	background-size: 60px 60px;
+}
+
+.schedule-details {
+	-webkit-box-flex: 1;
+	        flex: 1 0 0;
+	margin-right: 15px;
+}
+
+.schedule-time {
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #999;
+	padding-bottom: 3px;
+}
+
+.schedule-title {
+	font-weight: bold;
+}
+
+.schedule-subtitle {
+	padding-top: 3px;
+	font-size: 0.8em;
+}
+
+.schedule-action {
+	-webkit-box-flex: 0;
+	        flex: 0 1 auto;
+	align-self: center;
+	color: #ea3b3b;
+}
+
+.schedule-action-open {
+	font-size: 2em;
+	transition: -webkit-transform 0.25s ease;
+	transition: transform 0.25s ease;
+	transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.schedule-item.-opened .schedule-action-open {
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.schedule-description {
+	padding-top: 10px;
+	padding-left: 10px;
+	display: none;
+	line-height: 1.5;
+}
+
+.schedule-item.-opened .schedule-description {
+	display: block;
+}
+
+
+/* Speaker Sprite */
+.speaker-bryan,
+.speaker-denis,
+.speaker-ilya,
+.speaker-jaco,
+.speaker-jorn, 
+.speaker-jouni,
+.speaker-koen,
+.speaker-lucas,
+.speaker-matthew,
+.speaker-ramon, 
+.speaker-tobias,
+.speaker-zoe
+{
+	background: url('../images/speakers/_sprite_120.jpg') no-repeat;
+	background-size: 192px 256px;
+	width: 60px;
+	height: 60px;
+}
+ 
+.speaker-bryan {
+	background-position: -0px -0px;
+}
+.speaker-denis {
+	background-position: -64px -0px;
+}
+.speaker-ilya {
+	background-position: -128px -0px;
+}
+.speaker-jaco {
+	background-position: -0px -64px;
+}
+.speaker-jorn {
+	background-position: -64px -64px;
+}
+.speaker-jouni {
+	background-position: -128px -64px;
+}
+.speaker-koen {
+	background-position: -0px -128px;
+}
+.speaker-lucas {
+	background-position: -64px -128px;
+}
+.speaker-matthew {
+	background-position: -128px -128px;
+}
+.speaker-ramon {
+	background-position: -0px -192px;
+}
+.speaker-tobias {
+	background-position: -64px -192px;
+}
+.speaker-zoe {
+	background-position: -128px -192px;
+}
