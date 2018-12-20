@@ -67,8 +67,7 @@ body.-lets-go .-pre-event {
   position: absolute;
   top: 50%;
   left: 10px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   transition: all 0.2s ease;
   pointer-events: none; }
 
@@ -92,12 +91,10 @@ body.-lets-go .-pre-event {
 
 .form-field.-has-content .form-label {
   font-size: 80%;
-  -webkit-transform: translateY(-105%);
-          transform: translateY(-105%); }
+  transform: translateY(-105%); }
   @media only screen and (max-width: 767px) {
     .form-field.-has-content .form-label {
-      -webkit-transform: translateY(-125%);
-              transform: translateY(-125%); } }
+      transform: translateY(-125%); } }
 
 .form-field.-has-content .form-input {
   padding: 20px 10px 6px; }
@@ -282,8 +279,7 @@ body .align-middle-filler {
     border-radius: 0px;
     opacity: 1;
     left: 8px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     transition: .25s ease-in-out; }
   .nav-open span:nth-child(1) {
     top: 10px; }
@@ -296,11 +292,9 @@ body .align-middle-filler {
     width: 0%;
     left: 50%; }
   .nav-open.-opened span:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
+    transform: rotate(45deg); }
   .nav-open.-opened span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
+    transform: rotate(-45deg); }
   .nav-open.-opened span:nth-child(4) {
     top: 18px;
     width: 0%;
@@ -323,18 +317,18 @@ body .align-middle-filler {
   font-size: 0.8125em;
   font-weight: 700;
   text-transform: uppercase; }
-  .nav-item, .nav-item a, .nav-item .btn-default, .nav-item
-  .btn-info, .nav-item
-  .btn-primary, .nav-item
-  .btn-danger, .nav-item
-  .tito-tickets-button {
+  .nav-item, .nav-item a, .nav-item .btn-default,
+  .nav-item .btn-info,
+  .nav-item .btn-primary,
+  .nav-item .btn-danger,
+  .nav-item .tito-tickets-button {
     color: #fff;
     text-decoration: none; }
-  .nav-item a:hover, .nav-item .btn-default:hover, .nav-item
-  .btn-info:hover, .nav-item
-  .btn-primary:hover, .nav-item
-  .btn-danger:hover, .nav-item
-  .tito-tickets-button:hover {
+  .nav-item a:hover, .nav-item .btn-default:hover,
+  .nav-item .btn-info:hover,
+  .nav-item .btn-primary:hover,
+  .nav-item .btn-danger:hover,
+  .nav-item .tito-tickets-button:hover {
     color: rgba(255, 255, 255, 0.6); }
   @media only screen and (min-width: 768px) {
     .nav-item {
@@ -737,11 +731,11 @@ body .align-middle-filler {
   font-size: 0.875em;
   color: #fff;
   background-color: #adadad; }
-  .section-footer a, .section-footer .btn-default, .section-footer
-  .btn-info, .section-footer
-  .btn-primary, .section-footer
-  .btn-danger, .section-footer
-  .tito-tickets-button {
+  .section-footer a, .section-footer .btn-default,
+  .section-footer .btn-info,
+  .section-footer .btn-primary,
+  .section-footer .btn-danger,
+  .section-footer .tito-tickets-button {
     color: #fff;
     text-decoration: underline; }
 
